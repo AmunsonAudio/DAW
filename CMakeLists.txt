@@ -150,8 +150,8 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         NEEDS_MIDI_INPUT TRUE
         NEEDS_MIDI_OUTPUT TRUE
         EDITOR_WANTS_KEYBOARD_FOCUS TRUE
-        COMPANY_NAME "Sonosaurus"
-        BUNDLE_ID "com.Sonosaurus.SonoBus"
+        COMPANY_NAME "AmunsonAudio"
+        BUNDLE_ID "com.AmunsonAudio.app"
         MICROPHONE_PERMISSION_ENABLED TRUE
         
         ICON_BIG "images/sonobus_icon_mac_1024.png"
@@ -173,7 +173,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         PLUGIN_MANUFACTURER_CODE Sono
         PLUGIN_CODE ${plugincode}
         FORMATS ${formats}
-        DESCRIPTION "SonoBus - Network Audio"
+        DESCRIPTION "Amunson Audio"
         PRODUCT_NAME "${product_name}")
 
     juce_generate_juce_header("${target_name}")
@@ -450,6 +450,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
     juce_add_binary_data("${target_name}_SBData" SOURCES
         Source/wordmaker.g
         Source/DejaVuSans.ttf
+        Source/BricolageGrotesque-Regular.ttf
         localization/localized_de.txt
         localization/localized_es.txt
         localization/localized_fr.txt
@@ -545,6 +546,9 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         images/triangle_disclosure_right.svg
         images/urei_main.wav
         images/x_icon.svg
+        images/AmunsonAudio172x96.jpg
+        images/AmunsonAudioTransparent.png
+        images/AmunsonAudioWide.png
     )
 
     set_target_properties(${target_name}_SBData PROPERTIES FOLDER "Targets")
@@ -605,7 +609,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
 endfunction()
 
 # most of the targets
-sono_add_custom_plugin_target(SonoBus SonoBus "${FormatsToBuild}" FALSE  "NBus")
+sono_add_custom_plugin_target(SonoBus AmunsonAudio "${FormatsToBuild}" FALSE  "NBus")
 
 # Mobile targets
 #sono_add_custom_plugin_target(SonoBusMobile "AUv3 Standalone" FALSE "NBus")

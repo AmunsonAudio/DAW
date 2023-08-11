@@ -654,7 +654,7 @@ void ChatView::showSaveChat()
 
         // TODO - on iOS we need to give it a name first
 //#if (JUCE_IOS || JUCE_ANDROID)
-        String filename = String("SonoBusChat_") + Time::getCurrentTime().formatted("%Y-%m-%d_%H.%M.%S");
+        String filename = String("AmunsonAudioChat_") + Time::getCurrentTime().formatted("%Y-%m-%d_%H.%M.%S");
         recdir = File::getSpecialLocation(File::userDocumentsDirectory).getNonexistentChildFile (filename, ".txt");
 //#endif
 

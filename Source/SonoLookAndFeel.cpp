@@ -33,7 +33,7 @@ SonoLookAndFeel::SonoLookAndFeel()
     setColour (TextButton::buttonColourId, Colour::fromFloatRGBA(0.15, 0.15, 0.15, 0.7)); // old one
     //setColour (TextButton::buttonColourId, Colour::fromFloatRGBA(0.15, 0.15, 0.15, 0.0));
     //setColour (TextButton::buttonOnColourId, Colour (0xff3d70c8));
-    setColour (TextButton::buttonOnColourId, Colour::fromFloatRGBA(0.5, 0.4, 0.6, 0.8));
+    setColour (TextButton::buttonOnColourId, Colour(0xFF002CFF));
     setColour (TextButton::textColourOnId, Colour (0xddcccccc));
     setColour (TextButton::textColourOffId, Colour (0xdde9e9e9));
 
@@ -51,7 +51,7 @@ SonoLookAndFeel::SonoLookAndFeel()
 
     setColour (TextEditor::backgroundColourId, Colour (0xff050505));
     setColour (TextEditor::textColourId, Colour (0xffe9e9e9));
-    setColour (TextEditor::highlightColourId, Colour (0xff5959f9));
+    setColour (TextEditor::highlightColourId, Colour (0xFF002CFF));
     setColour (TextEditor::outlineColourId, Colour::fromFloatRGBA(0.3, 0.3, 0.3, 0.5));
     setColour (TextEditor::focusedOutlineColourId, Colour::fromFloatRGBA(0.5, 0.5, 0.5, 0.7));
 
@@ -62,10 +62,10 @@ SonoLookAndFeel::SonoLookAndFeel()
     setColour (Slider::textBoxHighlightColourId, Colour (0xaa555555));
     setColour (Slider::textBoxOutlineColourId, Colour::fromFloatRGBA(0.3, 0.3, 0.3, 0.5));
     
-    setColour (Slider::trackColourId, Colour::fromFloatRGBA(0.1, 0.4, 0.6, 0.8));
-    setColour (Slider::thumbColourId, Colour::fromFloatRGBA(0.5, 0.4, 0.6, 0.9));
+    setColour(Slider::trackColourId, juce::Colour(0xFF1A2E61));
+    setColour(Slider::thumbColourId, juce::Colour(0xFF002CFF));
     //setColour (Slider::thumbColourId, Colour::fromFloatRGBA(0.2, 0.5, 0.7, 1.0));
-    setColour (Slider::rotarySliderFillColourId, Colour::fromFloatRGBA(0.5, 0.4, 0.6, 0.9));
+    setColour (Slider::rotarySliderFillColourId, juce::Colour(0xFF1A2E61));
     
     setColour (TabbedButtonBar::tabOutlineColourId, Colour::fromFloatRGBA(0.3, 0.3, 0.3, 0.5));
 
@@ -96,24 +96,25 @@ SonoLookAndFeel::SonoLookAndFeel()
     setColour (DrawableButton::textColourOnId, Colour (0xffe9e9e9));
 
     //setColour (DrawableButton::backgroundColourId, Colour (0xffb9b9b9));
-    setColour (DrawableButton::backgroundOnColourId, Colour::fromFloatRGBA(0.5, 0.4, 0.6, 0.8));
+    setColour (DrawableButton::backgroundOnColourId, Colour(0xFF002CFF));
 
     //setColour (ConfigurationRowView::backgroundColourId, Colour::fromFloatRGBA(0.05, 0.05, 0.05, 1.0));
     //setColour (ConfigurationRowView::selectedBackgroundColourId, Colour::fromFloatRGBA(0.15, 0.15, 0.15, 1.0));
 
-    setColour(ToggleButton::tickColourId, Colour::fromFloatRGBA(0.4, 0.8, 1.0, 1.0));
+    setColour(ToggleButton::tickColourId, Colour(0xFF002CFF));
     
     setColour (DirectoryContentsDisplayComponent::highlightColourId, Colour::fromFloatRGBA(0.1, 0.4, 0.6, 0.9));
     setColour (DirectoryContentsDisplayComponent::textColourId, Colour (0xffe9e9e9));
     // setColour (Label::textColourId, Colour (0xffe9e9e9));
 
-    //myFont = Typeface::createSystemTypefaceFor (BinaryData::DejaVuSans_ttf, BinaryData::DejaVuSans_ttfSize);
+    // myFont = Typeface::createSystemTypefaceFor (BinaryData::DejaVuSans_ttf, BinaryData::DejaVuSans_ttfSize);
+    myFont = Typeface::createSystemTypefaceFor (BinaryData::BricolageGrotesqueRegular_ttf, BinaryData::BricolageGrotesqueRegular_ttfSize);
     //setDefaultSansSerifTypefaceName("Gill Sans");
     //setDefaultSansSerifTypefaceName("Arial Unicode MS");
     //setDefaultSansSerifTypefaceName(myFont.getTypefaceName());
 
     //myFont = Typeface::createSystemTypefaceFor (BinaryData::GillSans_ttc, BinaryData::GillSans_ttcSize);
-    myFont = Font(16 * fontScale);
+    // myFont = Font(16 * fontScale);
     
     setupDefaultMeterColours();
 

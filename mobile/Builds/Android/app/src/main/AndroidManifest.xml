@@ -17,6 +17,7 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <receiver android:name="com.rmsl.juce.Receiver" android:exported="false"/>
     <provider android:name="com.rmsl.juce.JuceSharingContentProvider" android:authorities="com.sonosaurus.sonobus.sharingcontentprovider"
               android:grantUriPermissions="true" android:exported="true"/>
   </application>

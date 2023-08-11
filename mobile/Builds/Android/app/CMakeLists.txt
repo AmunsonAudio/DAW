@@ -1,7 +1,7 @@
 # Automatically generated CMakeLists, created by the Projucer
 # Don't edit this file! Your changes will be overwritten when you re-save the Projucer project!
 
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.22)
 
 project(juce_jni_project)
 
@@ -4294,7 +4294,7 @@ target_link_libraries( ${BINARY_NAME}
     ${android}
     ${glesv3}
     ${egl}
-    ${opus}
     "cpufeatures"
     "oboe"
+    [[opus]]
 )

@@ -46,8 +46,8 @@ publicGroupsListModel(this)
     mConnectTab->setOutline(0);
     mConnectTab->setTabBarDepth(36);
     mConnectTab->getTabbedButtonBar().setMinimumTabScaleFactor(0.1f);
-    mConnectTab->getTabbedButtonBar().setColour(TabbedButtonBar::frontTextColourId, Colour::fromFloatRGBA(0.4, 0.8, 1.0, 1.0));
-    mConnectTab->getTabbedButtonBar().setColour(TabbedButtonBar::frontOutlineColourId, Colour::fromFloatRGBA(0.4, 0.8, 1.0, 0.5));
+    mConnectTab->getTabbedButtonBar().setColour(TabbedButtonBar::frontTextColourId, Colour(0xFFFFFFFF));
+    mConnectTab->getTabbedButtonBar().setColour(TabbedButtonBar::frontOutlineColourId, Colour(0xFFFF2E61));
 
     mDirectConnectContainer = std::make_unique<Component>();
     mServerConnectContainer = std::make_unique<Component>();
@@ -86,7 +86,7 @@ publicGroupsListModel(this)
     mRemoteAddressStaticLabel = std::make_unique<Label>("remaddrst", TRANS("Host: "));
     mRemoteAddressStaticLabel->setJustificationType(Justification::centredRight);
 
-    mDirectConnectDescriptionLabel = std::make_unique<Label>("dirconndesc", TRANS("Connect directly to other instances of SonoBus on your local network with the local address that they advertise. This is experimental, using a private group is recommended instead, and works fine on local networks."));
+    mDirectConnectDescriptionLabel = std::make_unique<Label>("dirconndesc", TRANS("Connect directly to other jam sessions on your local network with the local address that they advertise. This is experimental, using a private group is recommended instead, and works fine on local networks."));
     mDirectConnectDescriptionLabel->setJustificationType(Justification::topLeft);
 
     mAddRemoteHostEditor = std::make_unique<TextEditor>("remaddredit");
@@ -122,14 +122,14 @@ publicGroupsListModel(this)
     mDirectConnectButton = std::make_unique<TextButton>("directconnect");
     mDirectConnectButton->setButtonText(TRANS("Direct Connect"));
     mDirectConnectButton->addListener(this);
-    mDirectConnectButton->setColour(TextButton::buttonColourId, Colour::fromFloatRGBA(0.1, 0.4, 0.6, 0.6));
+    mDirectConnectButton->setColour(TextButton::buttonColourId, juce::Colour(0xFF1A2E61));
     mDirectConnectButton->setWantsKeyboardFocus(true);
 
 
     mServerConnectButton = std::make_unique<TextButton>("serverconnect");
     mServerConnectButton->setButtonText(TRANS("Connect to Group"));
     mServerConnectButton->addListener(this);
-    mServerConnectButton->setColour(TextButton::buttonColourId, Colour::fromFloatRGBA(0.1, 0.4, 0.6, 0.6));
+    mServerConnectButton->setColour(TextButton::buttonColourId, Colour (0xFF1A2E61));
     mServerConnectButton->setWantsKeyboardFocus(true);
 
     mServerHostEditor = std::make_unique<TextEditor>("srvaddredit");
@@ -317,7 +317,7 @@ publicGroupsListModel(this)
     mPublicServerAddGroupButton = std::make_unique<TextButton>("addgroup");
     mPublicServerAddGroupButton->setButtonText(TRANS("Create Group..."));
     mPublicServerAddGroupButton->addListener(this);
-    mPublicServerAddGroupButton->setColour(TextButton::buttonColourId, Colour::fromFloatRGBA(0.1, 0.4, 0.6, 0.6));
+    mPublicServerAddGroupButton->setColour(TextButton::buttonColourId, Colour(0xFF1A2E61));
     mPublicServerAddGroupButton->setWantsKeyboardFocus(true);
 
     mPublicServerGroupEditor = std::make_unique<TextEditor>("pubgroupedit");

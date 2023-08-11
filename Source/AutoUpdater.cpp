@@ -557,9 +557,9 @@ void restartProcess (const File& targetFolder)
 
    #if JUCE_MAC || JUCE_LINUX
     #if JUCE_MAC
-     auto newProcess = targetFolder.getChildFile ("SonoBus.app").getChildFile ("Contents").getChildFile ("MacOS").getChildFile ("SonoBus");
+     auto newProcess = targetFolder.getChildFile ("AmunsonAudio.app").getChildFile ("Contents").getChildFile ("MacOS").getChildFile ("AmunsonAudio");
     #elif JUCE_LINUX
-     auto newProcess = targetFolder.getChildFile ("SonoBus");
+     auto newProcess = targetFolder.getChildFile ("AmunsonAudio");
     #endif
 
     StringArray command ("/bin/sh", "-c", "while killall -0 SonoBus; do sleep 5; done; " + newProcess.getFullPathName().quoted());
