@@ -8,7 +8,7 @@
 			<key>manufacturer</key>
 			<string>Sono</string>
 			<key>name</key>
-			<string>Sonosaurus: SonoBus</string>
+			<string>Amunson Audio: CoLabs</string>
 			<key>subtype</key>
 			<string>NBus</string>
 			<key>type</key>
@@ -18,13 +18,13 @@
 		</dict>
 	</array>
 	<key>CFBundleDisplayName</key>
-	<string>SonoBus</string>
+	<string>CoLabs</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleName</key>
-	<string>SonoBus</string>
+	<string>CoLabs</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -35,10 +35,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>net.sonobus</string>
+			<string>com.amunsonaudio</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sonobus</string>
+				<string>amunsonaudio</string>
 			</array>
 		</dict>
 	</array>
@@ -51,9 +51,9 @@
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>2023 Sonosaurus LLC</string>
+	<string>2023 Amunson Audio LLC</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>SonoBus uses networking to communicate with other local services</string>
+	<string>CoLabs uses networking to communicate with other local services</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app requires audio input. If you do not have an audio interface connected it will use the built-in microphone.</string>
 	<key>UIBackgroundModes</key>

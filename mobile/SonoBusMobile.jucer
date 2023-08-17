@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="ZRovAH" name="SonoBus" projectType="audioplug" companyName="Sonosaurus"
-              companyCopyright="2023 Sonosaurus LLC" companyEmail="support@sonosaurus.com"
+<JUCERPROJECT id="ZRovAH" name="CoLabs" projectType="audioplug" companyName="Amunson Audio"
+              companyCopyright="2023 Amunson Audio LLC" companyEmail="colabs@amunsonaudio.com"
               pluginFormats="buildAUv3,buildStandalone,enableIAA" pluginManufacturerCode="Sono"
               pluginCode="NBus" defines="JUCE_USE_CUSTOM_PLUGIN_STANDALONE_APP=1&#10;SONOBUS_BUILD_VERSION=&quot;1.4.9-74&quot;&#10;"
-              pluginDesc="SonoBus - Network Audio" version="1.6.2" cppLanguageStandard="17"
+              pluginDesc="CoLabs - Network Jam Tool" version="1.6.2" cppLanguageStandard="17"
               projectLineFeed="&#10;" jucerFormatVersion="1" pluginAUMainType="'aufx'"
               pluginAUIsSandboxSafe="1">
-  <MAINGROUP id="i87g34" name="SonoBus">
+  <MAINGROUP id="i87g34" name="CoLabs">
     <GROUP id="{A463ADFB-B23B-B2B4-881B-B7CE9954D0D4}" name="deps">
       <GROUP id="{81488E5D-9CA2-F73A-62B1-4376F46E70B1}" name="aoo">
         <FILE id="CXCcNv" name="aoo.h" compile="0" resource="0" file="../deps/aoo/lib/aoo/aoo.h"/>
@@ -93,6 +93,8 @@
         <FILE id="TLk3c2" name="localized_ru.txt" compile="0" resource="1"
               file="../localization/localized_ru.txt"/>
       </GROUP>
+      <FILE id="PXqOId" name="AmunsonAudioWide.png" compile="0" resource="1"
+            file="../images/AmunsonAudioWide.png"/>
       <FILE id="xiA07t" name="bar_click.wav" compile="0" resource="1" file="../images/bar_click.wav"/>
       <FILE id="fRSnh7" name="beat_click.wav" compile="0" resource="1" file="../images/beat_click.wav"/>
       <FILE id="PI0BgL" name="chat.svg" compile="0" resource="1" file="../images/chat.svg"/>
@@ -388,10 +390,12 @@
             file="../Source/WaveformTransportComponent.h"/>
       <FILE id="GylxQB" name="zitaRev.h" compile="0" resource="0" file="../Source/zitaRev.h"/>
     </GROUP>
+    <FILE id="xwNRE5" name="BricolageGrotesque-Regular.ttf" compile="0"
+          resource="1" file="../Source/BricolageGrotesque-Regular.ttf"/>
   </MAINGROUP>
   <EXPORTFORMATS>
     <XCODE_IPHONE targetFolder="Builds/iOS" microphonePermissionNeeded="1" iosBackgroundAudio="1"
-                  iosDevelopmentTeamID="XCS435894D" customPList="&lt;plist version=&quot;1.0&quot;&gt;&#10;&lt;dict&gt;&#10;&#10;&lt;key&gt;ITSAppUsesNonExemptEncryption&lt;/key&gt;&#10;&#9;&lt;false/&gt;&#10;&#10;&lt;key&gt;UIStatusBarHidden&lt;/key&gt;&#10;&#9;&lt;false/&gt;&#10;&#9;&lt;key&gt;UIStatusBarStyle&lt;/key&gt;&#10;&#9;&lt;string&gt;UIStatusBarStyleLightContent&lt;/string&gt;&#10;&lt;key&gt;UIViewControllerBasedStatusBarAppearance&lt;/key&gt;&#10;&lt;false/&gt;&#10;&#10;&lt;key&gt;CFBundleURLTypes&lt;/key&gt;&#10;&lt;array&gt;&#10;     &lt;dict&gt;&#10;         &lt;key&gt;CFBundleURLName&lt;/key&gt;&#10;         &lt;string&gt;net.sonobus&lt;/string&gt;&#10;         &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;&#10;         &lt;array&gt;&#10;              &lt;string&gt;sonobus&lt;/string&gt;&#10;         &lt;/array&gt;&#10;      &lt;/dict&gt;&#10;   &lt;/array&gt;&#10;&#10;&lt;key&gt;NSLocalNetworkUsageDescription&lt;/key&gt;&#10;&#9;&lt;string&gt;SonoBus uses networking to communicate with other local services&lt;/string&gt;&#10;&#10;&lt;/dict&gt;&#10;&lt;/plist&gt;"
+                  iosDevelopmentTeamID="WD4M48K2YF" customPList="&lt;plist version=&quot;1.0&quot;&gt;&#10;&lt;dict&gt;&#10;&#10;&lt;key&gt;ITSAppUsesNonExemptEncryption&lt;/key&gt;&#10;&#9;&lt;false/&gt;&#10;&#10;&lt;key&gt;UIStatusBarHidden&lt;/key&gt;&#10;&#9;&lt;false/&gt;&#10;&#9;&lt;key&gt;UIStatusBarStyle&lt;/key&gt;&#10;&#9;&lt;string&gt;UIStatusBarStyleLightContent&lt;/string&gt;&#10;&lt;key&gt;UIViewControllerBasedStatusBarAppearance&lt;/key&gt;&#10;&lt;false/&gt;&#10;&#10;&lt;key&gt;CFBundleURLTypes&lt;/key&gt;&#10;&lt;array&gt;&#10;     &lt;dict&gt;&#10;         &lt;key&gt;CFBundleURLName&lt;/key&gt;&#10;         &lt;string&gt;com.amunsonaudio&lt;/string&gt;&#10;         &lt;key&gt;CFBundleURLSchemes&lt;/key&gt;&#10;         &lt;array&gt;&#10;              &lt;string&gt;amunsonaudio&lt;/string&gt;&#10;         &lt;/array&gt;&#10;      &lt;/dict&gt;&#10;   &lt;/array&gt;&#10;&#10;&lt;key&gt;NSLocalNetworkUsageDescription&lt;/key&gt;&#10;&#9;&lt;string&gt;CoLabs uses networking to communicate with other local services&lt;/string&gt;&#10;&#10;&lt;/dict&gt;&#10;&lt;/plist&gt;"
                   extraDefs="USE_CODEC_OPUS=1&#10;AOO_TIMEFILTER_CHECK=0&#10;AOO_STATIC&#10;NOTUSED_JUCE_IOS_AUDIO_EXPLICIT_SAMPLERATES=8000\,16000\,22050\,44100\,48000\,88200\,96000"
                   externalLibraries="opus" smallIcon="tb00W2" bigIcon="rlxTrd"
                   UISupportsDocumentBrowser="1" UIFileSharingEnabled="1" customLaunchStoryboard="../images/LaunchScreen.storyboard"

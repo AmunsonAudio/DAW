@@ -38,6 +38,9 @@ namespace BinaryData
     extern const char*   localized_ru_txt;
     const int            localized_ru_txtSize = 54011;
 
+    extern const char*   AmunsonAudioWide_png;
+    const int            AmunsonAudioWide_pngSize = 237267;
+
     extern const char*   bar_click_wav;
     const int            bar_click_wavSize = 2846;
 
@@ -258,10 +261,10 @@ namespace BinaryData
     const int            skipforward_icon_svgSize = 2449;
 
     extern const char*   sonobus_logo_96_png;
-    const int            sonobus_logo_96_pngSize = 5099;
+    const int            sonobus_logo_96_pngSize = 9021;
 
     extern const char*   sonobus_title_small_png;
-    const int            sonobus_title_small_pngSize = 16322;
+    const int            sonobus_title_small_pngSize = 40699;
 
     extern const char*   soundboard_svg;
     const int            soundboard_svgSize = 6152;
@@ -296,8 +299,11 @@ namespace BinaryData
     extern const char*   x_icon_svg;
     const int            x_icon_svgSize = 4297;
 
+    extern const char*   BricolageGrotesqueRegular_ttf;
+    const int            BricolageGrotesqueRegular_ttfSize = 91276;
+
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 96;
+    const int namedResourceListSize = 98;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

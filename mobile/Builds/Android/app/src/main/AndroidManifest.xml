@@ -18,7 +18,7 @@
       </intent-filter>
     </activity>
     <receiver android:name="com.rmsl.juce.Receiver" android:exported="false"/>
-    <provider android:name="com.rmsl.juce.JuceSharingContentProvider" android:authorities="com.sonosaurus.sonobus.sharingcontentprovider"
+    <provider android:name="com.rmsl.juce.JuceSharingContentProvider" android:authorities="com.amunsonaudio.colabs.sharingcontentprovider"
               android:grantUriPermissions="true" android:exported="true"/>
   </application>
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
