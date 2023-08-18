@@ -364,7 +364,7 @@ publicGroupsListModel(this)
     mPublicServerConnectContainer->addAndMakeVisible(mPublicGroupComponent.get());
     mPublicGroupComponent->addAndMakeVisible(mPublicGroupsListBox.get());
 
-    mPublicServerConnectContainer->addAndMakeVisible(mPublicServerHostEditor.get());
+    // mPublicServerConnectContainer->addAndMakeVisible(mPublicServerHostEditor.get());
     mPublicServerConnectContainer->addAndMakeVisible(mPublicServerHostStaticLabel.get());
     mPublicServerConnectContainer->addAndMakeVisible(mPublicServerUserStaticLabel.get());
     mPublicServerConnectContainer->addAndMakeVisible(mPublicServerUsernameEditor.get());
@@ -610,7 +610,7 @@ void ConnectView::updateLayout()
     publicServAddressBox.items.clear();
     publicServAddressBox.flexDirection = FlexBox::Direction::row;
     publicServAddressBox.items.add(FlexItem(servLabelWidth, minitemheight, *mPublicServerHostStaticLabel).withMargin(2).withFlex(1).withMaxWidth(staticlabelmaxw));
-    publicServAddressBox.items.add(FlexItem(150, minpassheight, *mPublicServerHostEditor).withMargin(2).withFlex(1).withMaxWidth(220));
+    // publicServAddressBox.items.add(FlexItem(150, minpassheight, *mPublicServerHostEditor).withMargin(2).withFlex(1).withMaxWidth(220));
     publicServAddressBox.items.add(FlexItem(servLabelWidth, minitemheight, *mPublicServerStatusInfoLabel).withMargin(2).withFlex(0.75));
 
     publicServUserBox.items.clear();
@@ -819,7 +819,7 @@ void ConnectView::publicGroupLogin()
     DBG("Public host enter pressed");
     // parse it
     StringArray toks = StringArray::fromTokens(hostport, ":", "");
-    String host = "aoo.sonobus.net";
+    String host = DEFAULT_SERVER_HOST;
     int port = DEFAULT_SERVER_PORT;
 
     if (toks.size() >= 1) {
