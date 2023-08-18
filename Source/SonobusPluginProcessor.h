@@ -32,7 +32,7 @@ class Metronome;
 #define MAX_PEERS 32
 #define MAX_CHANGROUPS 64
 #define DEFAULT_SERVER_PORT 10998
-#define DEFAULT_SERVER_HOST "aoo.sonobus.net"
+#define DEFAULT_SERVER_HOST "18.190.82.203"
 
 
 struct AooServerConnectionInfo
