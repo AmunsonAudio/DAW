@@ -609,7 +609,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
 endfunction()
 
 # most of the targets
-sono_add_custom_plugin_target(SonoBus AmunsonAudio "${FormatsToBuild}" FALSE  "NBus")
+sono_add_custom_plugin_target(SonoBus Co-Labs "${FormatsToBuild}" FALSE  "NBus")
 
 # Mobile targets
 #sono_add_custom_plugin_target(SonoBusMobile "AUv3 Standalone" FALSE "NBus")
