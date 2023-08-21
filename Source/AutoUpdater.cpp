@@ -76,7 +76,7 @@ void LatestVersionCheckerAndUpdater::run()
         if (showAlertWindows)
             AlertWindow::showMessageBoxAsync (AlertWindow::InfoIcon,
                                               "No New Version Available",
-                                              "Your SonoBus version is up to date.");
+                                              "Your Co-Labs version is up to date.");
         return;
     }
 
