@@ -76,7 +76,7 @@ void LatestVersionCheckerAndUpdater::run()
         if (showAlertWindows)
             AlertWindow::showMessageBoxAsync (AlertWindow::InfoIcon,
                                               "No New Version Available",
-                                              "Your Co-Labs version is up to date.");
+                                              "Your CoLabs version is up to date.");
         return;
     }
 

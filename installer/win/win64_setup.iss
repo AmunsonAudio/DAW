@@ -1,10 +1,10 @@
 [Setup]
-AppName=Co-Labs
+AppName=CoLabs
 AppVersion=1.0
 WizardStyle=modern
 DefaultDirName={autopf}\AmunsonAudio
 DefaultGroupName=AmunsonAudio
-UninstallDisplayIcon={app}\Co-Labs.exe
+UninstallDisplayIcon={app}\CoLabs.exe
 Compression=lzma2
 SolidCompression=yes
 OutputBaseFilename=CoLabsSetup_x64
@@ -12,11 +12,11 @@ ArchitecturesAllowed=x64
 ArchitecturesInstallIn64BitMode=x64
 
 [Files]
-Source: "..\..\build\SonoBus_artefacts\Release\Standalone\Co-Labs.exe"; DestDir: "{app}";
-Source: "..\..\build\SonoBus_artefacts\Release\VST3\Co-Labs.vst3\Contents\x86_64-win\Co-Labs.vst3"; DestDir: "{app}"; Check: InstallVSTFile;
+Source: "..\..\build\SonoBus_artefacts\Release\Standalone\CoLabs.exe"; DestDir: "{app}";
+Source: "..\..\build\SonoBus_artefacts\Release\VST3\CoLabs.vst3\Contents\x86_64-win\CoLabs.vst3"; DestDir: "{app}"; Check: InstallVSTFile;
 
 [Icons]
-Name: "{group}\Co-Labs"; Filename: "{app}\Co-Labs.exe"
+Name: "{group}\CoLabs"; Filename: "{app}\CoLabs.exe"
 
 [Code]
 var
@@ -32,7 +32,7 @@ begin
   LabelFolder.Parent := MainPage.Surface;
   LabelFolder.Top := 48;
   LabelFolder.Left := 15;
-  LabelFolder.Caption := 'Installer will install standalone version of Co-Labs app. Check checkbox below to install in VST3 format.'
+  LabelFolder.Caption := 'Installer will install standalone version of CoLabs app. Check checkbox below to install in VST3 format.'
 
   InstallVSTCheckBox := TNewCheckBox.Create(MainPage);
   InstallVSTCheckBox.Parent := MainPage.Surface;

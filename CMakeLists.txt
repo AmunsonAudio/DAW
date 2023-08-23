@@ -151,7 +151,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         NEEDS_MIDI_OUTPUT TRUE
         EDITOR_WANTS_KEYBOARD_FOCUS TRUE
         COMPANY_NAME "AmunsonAudio"
-        BUNDLE_ID "com.AmunsonAudio.app"
+        BUNDLE_ID "com.amunsonaudio.CoLabs"
         MICROPHONE_PERMISSION_ENABLED TRUE
         
         ICON_BIG "images/sonobus_icon_mac_1024.png"
@@ -609,7 +609,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
 endfunction()
 
 # most of the targets
-sono_add_custom_plugin_target(SonoBus Co-Labs "${FormatsToBuild}" FALSE  "NBus")
+sono_add_custom_plugin_target(SonoBus CoLabs "${FormatsToBuild}" FALSE  "NBus")
 
 # Mobile targets
 #sono_add_custom_plugin_target(SonoBusMobile "AUv3 Standalone" FALSE "NBus")
