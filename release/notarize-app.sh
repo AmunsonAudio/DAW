@@ -148,8 +148,10 @@ if (( $do_submit )); then
     altool_status=$?
 
     if [[ "$altool_status" == "0" ]]; then
+        echo status was 0
         uuid=$(grep "RequestUUID = " "$tmpfile" | sed -e 's/.* = //')
     else
+        echo status was not 0
         if [[ -f "$tmpfile" ]]; then
             # second chance, if the file has already been uploaded, try to find the uuid in the error log
             # "The software asset has already been uploaded. The update ID is xxxxxxx-xxxx-xxxx-xxxxxxxx"

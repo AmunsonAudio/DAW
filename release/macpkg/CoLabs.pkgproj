@@ -38,7 +38,7 @@
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>../SonoBus/SonoBus.app</string>
+									<string>../CoLabs/CoLabs.app</string>
 									<key>PATH_TYPE</key>
 									<integer>1</integer>
 									<key>PERMISSIONS</key>
@@ -483,7 +483,7 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>net.sonobus.pkg.app</string>
+				<string>com.amunsonaudio.CoLabs.pkg.app</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -581,7 +581,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../SonoBus/SonoBus.component</string>
+															<string>../CoLabs/CoLabs.component</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -1020,7 +1020,7 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>net.sonobus.pkg.au</string>
+				<string>com.amunsonaudio.CoLabs.pkg.au</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -1105,7 +1105,7 @@
 																	<key>GID</key>
 																	<integer>80</integer>
 																	<key>PATH</key>
-																	<string>../SonoBus/SonoBus.aaxplugin</string>
+																	<string>../CoLabs/CoLabs.aaxplugin</string>
 																	<key>PATH_TYPE</key>
 																	<integer>1</integer>
 																	<key>PERMISSIONS</key>
@@ -1558,7 +1558,7 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>net.sonobus.pkg.aax</string>
+				<string>com.amunsonaudio.CoLabs.pkg.aax</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -1656,7 +1656,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../SonoBus/SonoBus.vst3</string>
+															<string>../CoLabs/CoLabs.vst3</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -1684,7 +1684,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../SonoBus/SonoBusInstrument.vst3</string>
+															<string>../CoLabs/CoLabsInstrument.vst3</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -2123,7 +2123,7 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>net.sonobus.pkg.vst3</string>
+				<string>com.amunsonaudio.CoLabs.pkg.vst3</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -2221,7 +2221,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>../SonoBus/SonoBus.vst</string>
+															<string>../CoLabs/CoLabs.vst</string>
 															<key>PATH_TYPE</key>
 															<integer>1</integer>
 															<key>PERMISSIONS</key>
@@ -2660,7 +2660,7 @@
 				<key>FOLLOW_SYMBOLIC_LINKS</key>
 				<false/>
 				<key>IDENTIFIER</key>
-				<string>net.sonobus.pkg.vst2</string>
+				<string>com.amunsonaudio.CoLabs.pkg.vst2</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
@@ -2940,7 +2940,7 @@
 						<key>LANGUAGE</key>
 						<string>English</string>
 						<key>VALUE</key>
-						<string>SonoBus</string>
+						<string>CoLabs</string>
 					</dict>
 				</array>
 			</dict>
@@ -2971,7 +2971,7 @@
 							<key>LANGUAGE</key>
 							<string>English</string>
 							<key>VALUE</key>
-							<string>SonoBus is only supported on Mac OS 10.9 and above.</string>
+							<string>CoLabs is only supported on Mac OS 10.9 and above.</string>
 						</dict>
 					</array>
 					<key>NAME</key>
@@ -3172,7 +3172,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>SonoBus Installer</string>
+			<string>CoLabs Installer</string>
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 			<key>TREAT_MISSING_PRESENTATION_DOCUMENTS_AS_WARNING</key>

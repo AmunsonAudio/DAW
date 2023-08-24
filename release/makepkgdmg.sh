@@ -11,7 +11,7 @@ rm -f SonoBusPkg.dmg
 
 cp SonoBus/README_MAC.txt SonoBusPkg/
 
-if dropdmg --config-name=SonoBusPkg --layout-folder SonoBusPkgLayout --volume-name="SonoBus v${VERSION}"  --APP_VERSION=v${VERSION}  --signing-identity=C7AF15C3BCF2AD2E5C102B9DB6502CFAE2C8CF3B SonoBusPkg
+if dropdmg --config-name=SonoBusPkg --layout-folder SonoBusPkgLayout --volume-name="SonoBus v${VERSION}"  --APP_VERSION=v${VERSION}  --signing-identity=D0D435D1F55B3EC083FE6C6C55813B5426AD6707 SonoBusPkg
 then
   mkdir -p ${VERSION}
   mv -v SonoBusPkg.dmg ${VERSION}/sonobus-${VERSION}-mac.dmg  	

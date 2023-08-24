@@ -150,7 +150,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         NEEDS_MIDI_INPUT TRUE
         NEEDS_MIDI_OUTPUT TRUE
         EDITOR_WANTS_KEYBOARD_FOCUS TRUE
-        COMPANY_NAME "AmunsonAudio"
+        COMPANY_NAME "amunsonaudio"
         BUNDLE_ID "com.amunsonaudio.CoLabs"
         MICROPHONE_PERMISSION_ENABLED TRUE
         
@@ -609,11 +609,11 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
 endfunction()
 
 # most of the targets
-sono_add_custom_plugin_target(SonoBus CoLabs "${FormatsToBuild}" FALSE  "NBus")
+sono_add_custom_plugin_target(CoLabs CoLabs "${FormatsToBuild}" FALSE  "NBus")
 
 # Mobile targets
 #sono_add_custom_plugin_target(SonoBusMobile "AUv3 Standalone" FALSE "NBus")
 
 # add VSTi target
-sono_add_custom_plugin_target(SonoBusInst "SonoBusInstrument" "VST3" TRUE  "IBus")
+sono_add_custom_plugin_target(CoLabsInst "CoLabsInstrument" "VST3" TRUE  "IBus")
 

@@ -737,11 +737,11 @@ mState (*this, &mUndoManager, "SonoBusAoO",
     
     // use this to match our main app support dir
     PropertiesFile::Options options;
-    options.applicationName     = "AmunsonAudio";
+    options.applicationName     = "CoLabs";
     options.filenameSuffix      = ".xml";
-    options.osxLibrarySubFolder = "Application Support/AmunsonAudio";
+    options.osxLibrarySubFolder = "Application Support/CoLabs";
    #if JUCE_LINUX
-    options.folderName          = "~/.config/amunsonaudio";
+    options.folderName          = "~/.config/colabs";
    #else
     options.folderName          = "";
    #endif
@@ -764,7 +764,7 @@ mState (*this, &mUndoManager, "SonoBusAoO",
     // LEAVE EMPTY by default
 #else
     auto parentDir = File::getSpecialLocation (File::userMusicDirectory);
-    parentDir = parentDir.getChildFile("AmunsonAudio");
+    parentDir = parentDir.getChildFile("CoLabs");
     mDefaultRecordDir = URL(parentDir);
     mLastBrowseDir = mDefaultRecordDir.getLocalFile().getFullPathName();
 #endif
