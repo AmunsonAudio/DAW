@@ -118,10 +118,10 @@ set (MacPList "<plist version=\"1.0\">
 <array>
      <dict>
          <key>CFBundleURLName</key>
-         <string>net.sonobus</string>
+         <string>com.amunsonaudio.Sonobus</string>
          <key>CFBundleURLSchemes</key>
          <array>
-              <string>sonobus</string>
+              <string>colabs</string>
          </array>
       </dict>
    </array>
