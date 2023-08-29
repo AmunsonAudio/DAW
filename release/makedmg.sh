@@ -7,12 +7,12 @@ fi
 
 VERSION=$1
 
-rm -f SonoBus.dmg
+rm -f CoLabs.dmg
 
-if dropdmg --layout-folder SonoBusLayout --volume-name="SonoBus v${VERSION}"  --APP_VERSION=v${VERSION}  --signing-identity=D0D435D1F55B3EC083FE6C6C55813B5426AD6707 SonoBus
+if dropdmg --layout-folder CoLabsLayout --volume-name="CoLabs v${VERSION}"  --APP_VERSION=v${VERSION}  --signing-identity=C2552EB2949D5F03672EC9368E67B2BCB2A4F03F CoLabs
 then
   mkdir -p ${VERSION}
-  mv -v SonoBus.dmg ${VERSION}/sonobus-${VERSION}-mac.dmg  	
+  mv -v CoLabs.dmg ${VERSION}/colabs-${VERSION}-mac.dmg  	
 else
   echo "Error making DMG"
   exit 2

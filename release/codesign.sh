@@ -4,8 +4,8 @@
 
 # codesign them with developer ID cert
 
-POPTS="--strict  --force --options=runtime --sign D0D435D1F55B3EC083FE6C6C55813B5426AD6707 --timestamp"
-AOPTS="--strict  --force --options=runtime --sign D0D435D1F55B3EC083FE6C6C55813B5426AD6707 --timestamp"
+POPTS="--strict  --force --options=runtime --sign C2552EB2949D5F03672EC9368E67B2BCB2A4F03F --timestamp"
+AOPTS="--strict  --force --options=runtime --sign C2552EB2949D5F03672EC9368E67B2BCB2A4F03F --timestamp"
 
 codesign ${AOPTS} --entitlements CoLabs.entitlements CoLabs/CoLabs.app
 codesign ${POPTS} --entitlements CoLabs.entitlements  CoLabs/CoLabs.component
@@ -29,10 +29,25 @@ mkdir -p tmp
 
 # notarize them in parallel
 ./notarize-app.sh --submit=tmp/sbapp.uuid  CoLabs/CoLabs.app
+# STATUS__=$?
+# if [ $STATUS__ -ne 0 ]; then
+#   echo Notarize submit app failed: $STATUS__
+#   exit 2
+# fi
+
 ./notarize-app.sh --submit=tmp/sbau.uuid CoLabs/CoLabs.component
+
 ./notarize-app.sh --submit=tmp/sbvst3.uuid CoLabs/CoLabs.vst3
+
 ./notarize-app.sh --submit=tmp/sbinstvst3.uuid CoLabs/CoLabsInstrument.vst3
+
 # ./notarize-app.sh --submit=tmp/sbvst2.uuid CoLabs/CoLabs.vst 
+
+echo
+echo "!!! DONE submitting !!!"
+echo
+
+sleep 5
 
 if ! ./notarize-app.sh --resume=tmp/sbapp.uuid CoLabs/CoLabs.app ; then
   echo Notarization App failed

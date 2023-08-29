@@ -5,3 +5,9 @@ buildXcode
 release/1.*
 mobile/Builds
 .DS_Store
+
+release/CoLabs
+release/tmp
+release/macpkg/CoLabsTemp.pkgproj
+release/macpkg/CoLabs_All.pkgproj
+release/CoLabsPkg

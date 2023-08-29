@@ -14,6 +14,9 @@ APPNAME=CoLabs
 BUILDDIR=../build/CoLabs_artefacts/Release
 INSTBUILDDIR=../build/CoLabsInst_artefacts/Release
 
+
+# COMMENT FROM HERE
+
 rm -rf CoLabs
 
 mkdir -p CoLabs
@@ -25,9 +28,12 @@ cp -pLRv ${BUILDDIR}/Standalone/CoLabs.app  CoLabs/
 cp -pLRv ${BUILDDIR}/AU/CoLabs.component  CoLabs/
 cp -pLRv ${BUILDDIR}/VST3/CoLabs.vst3 CoLabs/
 cp -pLRv ${INSTBUILDDIR}/VST3/CoLabsInstrument.vst3 CoLabs/
-cp -pLRv ${BUILDDIR}/VST/CoLabs.vst  CoLabs/
-cp -pRHv ${BUILDDIR}/AAX/CoLabs.aaxplugin  CoLabs/
+# cp -pLRv ${BUILDDIR}/VST/CoLabs.vst  CoLabs/
+# cp -pRHv ${BUILDDIR}/AAX/CoLabs.aaxplugin  CoLabs/
 
+echo
+echo "!!! ALL FILES COPIED !!!"
+echo
 
 #cp -pLRv ${BUILDDIR}/CoLabs.app  CoLabs/
 #cp -pLRv ${BUILDDIR}/CoLabs.component  CoLabs/
@@ -40,6 +46,8 @@ cp -pRHv ${BUILDDIR}/AAX/CoLabs.aaxplugin  CoLabs/
 #ln -sf /Library/Audio/Plug-Ins/VST CoLabs/
 #ln -sf /Library/Application\ Support/Avid/Audio/Plug-Ins CoLabs/
 
+echo
+echo "!!! BEGIN: CODESIGN !!!"
 
 # this codesigns and notarizes everything
 if ! ./codesign.sh ; then
@@ -48,6 +56,9 @@ if ! ./codesign.sh ; then
   echo
   exit 1
 fi
+
+echo "!!! END: CODESIGN !!!"
+echo
 
 # make installer package (and sign it)
 
@@ -77,10 +88,14 @@ if ! productsign --sign ${INSTSIGNID} --timestamp  macpkg/build/CoLabs\ Installe
   exit 1
 fi
 
+# echo "DONE SIGNING!!"
+
 # make dmg with package inside it
 
+echo making dmg...
 if ./makepkgdmg.sh $VERSION ; then
 
+    echo goodie
    ./notarizedmg.sh ${VERSION}/colabs-${VERSION}-mac.dmg
 
    echo

@@ -38,7 +38,7 @@
 					<key>identifier</key>
 					<string>LayoutItem.CD1DEE20-0797-4524-BEE2-EFFF2A4C56EA</string>
 					<key>name</key>
-					<string>SonoBus Installer.pkg</string>
+					<string>CoLabs Installer.pkg</string>
 					<key>position</key>
 					<string>{192, 320}</string>
 					<key>type</key>
@@ -56,7 +56,7 @@
 {\*\expandedcolortbl;;\cspthree\c12854\c12854\c12854;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
-\f0\fs36 \cf2 Double-click the installer package to install the SonoBus application and plugins\
+\f0\fs36 \cf2 Double-click the installer package to install the CoLabs application and plugins\
 }</string>
 					<key>size</key>
 					<string>{269.32421875, 89.43359375}</string>
