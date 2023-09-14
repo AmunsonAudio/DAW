@@ -340,6 +340,7 @@
 		9D0815F81EA2504F4C1DC70D /* keypad-num-disabled.svg */ /* keypad-num-disabled.svg */ = {isa = PBXFileReference; lastKnownFileType = file.svg; name = "keypad-num-disabled.svg"; path = "../../../images/keypad-num-disabled.svg"; sourceTree = SOURCE_ROOT; };
 		9D0C76C6EB24F1232573AEBC /* dice_icon_128.png */ /* dice_icon_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dice_icon_128.png; path = ../../../images/dice_icon_128.png; sourceTree = SOURCE_ROOT; };
 		9DAB454F2DC46C4B34A880D7 /* SonoStandaloneFilterWindow.h */ /* SonoStandaloneFilterWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SonoStandaloneFilterWindow.h; path = ../../../Source/SonoStandaloneFilterWindow.h; sourceTree = SOURCE_ROOT; };
+		9DD6BB22BCF432B5A870ED3A /* BricolageGrotesque-Regular.ttf */ /* BricolageGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; name = "BricolageGrotesque-Regular.ttf"; path = "../../../Source/BricolageGrotesque-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		9E302561A825AA9B03E2CFFB /* mtdm.cc */ /* mtdm.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mtdm.cc; path = ../../../Source/mtdm.cc; sourceTree = SOURCE_ROOT; };
 		9E95C404D93AA096997A80DC /* sync.hpp */ /* sync.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sync.hpp; path = ../../../deps/aoo/lib/src/sync.hpp; sourceTree = SOURCE_ROOT; };
 		A0188213F588BAAB6FB5A1C0 /* paste_icon.svg */ /* paste_icon.svg */ = {isa = PBXFileReference; lastKnownFileType = file.svg; name = paste_icon.svg; path = ../../../images/paste_icon.svg; sourceTree = SOURCE_ROOT; };
@@ -396,6 +397,7 @@
 		D55E5C96BDF74F5FBC5BC106 /* mic_disabled.svg */ /* mic_disabled.svg */ = {isa = PBXFileReference; lastKnownFileType = file.svg; name = mic_disabled.svg; path = ../../../images/mic_disabled.svg; sourceTree = SOURCE_ROOT; };
 		D6AD9AA02C21EAC2AB5CE1C3 /* md5.h */ /* md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = md5.h; path = ../../../deps/aoo/deps/md5/md5.h; sourceTree = SOURCE_ROOT; };
 		D6CF7DEAACA4A92312E5D5F9 /* SoundboardProcessor.cpp */ /* SoundboardProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SoundboardProcessor.cpp; path = ../../../Source/SoundboardProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		D6E27981574352DF4A42F37D /* AmunsonAudioWide.png */ /* AmunsonAudioWide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AmunsonAudioWide.png; path = ../../../images/AmunsonAudioWide.png; sourceTree = SOURCE_ROOT; };
 		D794BE73C6E6B10D0ED48635 /* plus_icon.svg */ /* plus_icon.svg */ = {isa = PBXFileReference; lastKnownFileType = file.svg; name = plus_icon.svg; path = ../../../images/plus_icon.svg; sourceTree = SOURCE_ROOT; };
 		D936D000061D8C7BF3DAB200 /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = ../../../deps/juce/modules/juce_graphics; sourceTree = SOURCE_ROOT; };
 		D9891D81FA728B9D85EBA520 /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
@@ -498,6 +500,7 @@
 				E0370B1C3E98A416CD5E34C2,
 				F836C3240E08DD29F5CFA902,
 				C1415C221461BEE002F6EA00,
+				9DD6BB22BCF432B5A870ED3A,
 			);
 			name = SonoBus;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 			isa = PBXGroup;
 			children = (
 				5B5CCF5136D99B632D740AA5,
+				D6E27981574352DF4A42F37D,
 				3162D49DAC464EA6D742FEE2,
 				2ADA936444E7FCB53D483F51,
 				4FDF448F5AAF93A1BC98D536,
@@ -971,8 +975,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				71489E88420BB0BA75643CA6,
 				A468A2C74541BC37E7DFB025,
+				71489E88420BB0BA75643CA6,
 			);
 			name = "SonoBus - Standalone Plugin";
 			productName = SonoBus;
@@ -989,7 +993,7 @@
 				ORGANIZATIONNAME = "Sonosaurus";
 				TargetAttributes = {
 					682C787A7ABF2AAC57AF5600 = {
-						DevelopmentTeam = XCS435894D;
+						DevelopmentTeam = WD4M48K2YF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1013,7 +1017,7 @@
 						};
 					};
 					9D0A9977558C639D0B18A276 = {
-						DevelopmentTeam = XCS435894D;
+						DevelopmentTeam = WD4M48K2YF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1037,7 +1041,7 @@
 						};
 					};
 					AFDD2455B41B23961F3B8586 = {
-						DevelopmentTeam = XCS435894D;
+						DevelopmentTeam = WD4M48K2YF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1061,7 +1065,7 @@
 						};
 					};
 					E67987C2A08C277E99344B7B = {
-						DevelopmentTeam = XCS435894D;
+						DevelopmentTeam = WD4M48K2YF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1272,7 +1276,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1336,7 +1340,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1401,7 +1405,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1463,7 +1467,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1528,7 +1532,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1643,7 +1647,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1759,7 +1763,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1825,7 +1829,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = XCS435894D;
+				DEVELOPMENT_TEAM = WD4M48K2YF;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (

@@ -7,37 +7,47 @@ fi
 
 VERSION=$1
 
+APPNAME=CoLabs
+
 
 #BUILDDIR=../Builds/MacOSX/build/Release
-BUILDDIR=../build/SonoBus_artefacts/Release
-INSTBUILDDIR=../build/SonoBusInst_artefacts/Release
-
-rm -rf SonoBus
-
-mkdir -p SonoBus
+BUILDDIR=../build/CoLabs_artefacts/Release
+INSTBUILDDIR=../build/CoLabsInst_artefacts/Release
 
 
-cp ../doc/README_MAC.txt SonoBus/
+# COMMENT FROM HERE
 
-cp -pLRv ${BUILDDIR}/Standalone/SonoBus.app  SonoBus/
-cp -pLRv ${BUILDDIR}/AU/SonoBus.component  SonoBus/
-cp -pLRv ${BUILDDIR}/VST3/SonoBus.vst3 SonoBus/
-cp -pLRv ${INSTBUILDDIR}/VST3/SonoBusInstrument.vst3 SonoBus/
-cp -pLRv ${BUILDDIR}/VST/SonoBus.vst  SonoBus/
-cp -pRHv ${BUILDDIR}/AAX/SonoBus.aaxplugin  SonoBus/
+rm -rf CoLabs
+
+mkdir -p CoLabs
 
 
-#cp -pLRv ${BUILDDIR}/SonoBus.app  SonoBus/
-#cp -pLRv ${BUILDDIR}/SonoBus.component  SonoBus/
-#cp -pLRv ${BUILDDIR}/SonoBus.vst3 SonoBus/
-#cp -pLRv ${BUILDDIR}/SonoBus.vst  SonoBus/
-#cp -pRHv ${BUILDDIR}/SonoBus.aaxplugin  SonoBus/
+cp ../doc/README_MAC.txt CoLabs/
 
-#ln -sf /Library/Audio/Plug-Ins/Components SonoBus/
-#ln -sf /Library/Audio/Plug-Ins/VST3 SonoBus/
-#ln -sf /Library/Audio/Plug-Ins/VST SonoBus/
-#ln -sf /Library/Application\ Support/Avid/Audio/Plug-Ins SonoBus/
+cp -pLRv ${BUILDDIR}/Standalone/CoLabs.app  CoLabs/
+cp -pLRv ${BUILDDIR}/AU/CoLabs.component  CoLabs/
+cp -pLRv ${BUILDDIR}/VST3/CoLabs.vst3 CoLabs/
+cp -pLRv ${INSTBUILDDIR}/VST3/CoLabsInstrument.vst3 CoLabs/
+# cp -pLRv ${BUILDDIR}/VST/CoLabs.vst  CoLabs/
+# cp -pRHv ${BUILDDIR}/AAX/CoLabs.aaxplugin  CoLabs/
 
+echo
+echo "!!! ALL FILES COPIED !!!"
+echo
+
+#cp -pLRv ${BUILDDIR}/CoLabs.app  CoLabs/
+#cp -pLRv ${BUILDDIR}/CoLabs.component  CoLabs/
+#cp -pLRv ${BUILDDIR}/CoLabs.vst3 CoLabs/
+#cp -pLRv ${BUILDDIR}/CoLabs.vst  CoLabs/
+#cp -pRHv ${BUILDDIR}/CoLabs.aaxplugin  CoLabs/
+
+#ln -sf /Library/Audio/Plug-Ins/Components CoLabs/
+#ln -sf /Library/Audio/Plug-Ins/VST3 CoLabs/
+#ln -sf /Library/Audio/Plug-Ins/VST CoLabs/
+#ln -sf /Library/Application\ Support/Avid/Audio/Plug-Ins CoLabs/
+
+echo
+echo "!!! BEGIN: CODESIGN !!!"
 
 # this codesigns and notarizes everything
 if ! ./codesign.sh ; then
@@ -47,42 +57,49 @@ if ! ./codesign.sh ; then
   exit 1
 fi
 
+echo "!!! END: CODESIGN !!!"
+echo
+
 # make installer package (and sign it)
 
-rm -f macpkg/SonoBusTemp.pkgproj
+rm -f macpkg/CoLabsTemp.pkgproj
 
-if ! ./update_package_version.py ${VERSION} macpkg/SonoBus.pkgproj macpkg/SonoBusTemp.pkgproj ; then
+if ! ./update_package_version.py ${VERSION} macpkg/CoLabs.pkgproj macpkg/CoLabsTemp.pkgproj ; then
   echo
   echo Error updating package project versions
   echo
   exit 1
 fi
 
-if ! packagesbuild  macpkg/SonoBusTemp.pkgproj ; then
+if ! packagesbuild  macpkg/CoLabsTemp.pkgproj ; then
   echo 
   echo Error building package
   echo
   exit 1
 fi
 
-mkdir -p SonoBusPkg
-rm -f SonoBusPkg/*
+mkdir -p CoLabsPkg
+rm -f CoLabsPkg/*
 
-if ! productsign --sign ${INSTSIGNID} --timestamp  macpkg/build/SonoBus\ Installer.pkg SonoBusPkg/SonoBus\ Installer.pkg ; then
+if ! productsign --sign ${INSTSIGNID} --timestamp  macpkg/build/CoLabs\ Installer.pkg CoLabsPkg/CoLabs\ Installer.pkg ; then
   echo 
   echo Error signing package
   echo
   exit 1
 fi
 
+# echo "DONE SIGNING!!"
+
 # make dmg with package inside it
 
+echo making dmg...
 if ./makepkgdmg.sh $VERSION ; then
 
-   ./notarizedmg.sh ${VERSION}/sonobus-${VERSION}-mac.dmg
+    echo goodie
+   ./notarizedmg.sh ${VERSION}/colabs-${VERSION}-mac.dmg
 
    echo
-   echo COMPLETED DMG READY === ${VERSION}/sonobus-${VERSION}-mac.dmg
+   echo COMPLETED DMG READY === ${VERSION}/colabs-${VERSION}-mac.dmg
    echo
    
 fi

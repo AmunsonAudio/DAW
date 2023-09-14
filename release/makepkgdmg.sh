@@ -7,14 +7,14 @@ fi
 
 VERSION=$1
 
-rm -f SonoBusPkg.dmg
+rm -f CoLabsPkg.dmg
 
-cp SonoBus/README_MAC.txt SonoBusPkg/
+cp CoLabs/README_MAC.txt CoLabsPkg/
 
-if dropdmg --config-name=SonoBusPkg --layout-folder SonoBusPkgLayout --volume-name="SonoBus v${VERSION}"  --APP_VERSION=v${VERSION}  --signing-identity=C7AF15C3BCF2AD2E5C102B9DB6502CFAE2C8CF3B SonoBusPkg
+if dropdmg --config-name=CoLabsPkg --layout-folder CoLabsPkgLayout --volume-name="CoLabs v${VERSION}"  --APP_VERSION=v${VERSION}  --signing-identity=C2552EB2949D5F03672EC9368E67B2BCB2A4F03F CoLabsPkg
 then
   mkdir -p ${VERSION}
-  mv -v SonoBusPkg.dmg ${VERSION}/sonobus-${VERSION}-mac.dmg  	
+  mv -v CoLabsPkg.dmg ${VERSION}/colabs-${VERSION}-mac.dmg  	
 else
   echo "Error making package DMG"
   exit 2

@@ -47,7 +47,7 @@ void BeatToggleGrid::setupStuff()
     
     activeColor = Colour::fromFloatRGBA(0.1, 0.7, 0.5, 1.0);
     
-    accentedColor = Colour::fromFloatRGBA(0.5, 0.4, 0.6, 0.9);
+    accentedColor = Colour(0xFF002CFF);
     
     
     //self.backgroundColor = [UIColor colorWithRed:0.4 green:0.5 blue:0.6 alpha:1.0 ];

@@ -76,7 +76,7 @@ void LatestVersionCheckerAndUpdater::run()
         if (showAlertWindows)
             AlertWindow::showMessageBoxAsync (AlertWindow::InfoIcon,
                                               "No New Version Available",
-                                              "Your SonoBus version is up to date.");
+                                              "Your CoLabs version is up to date.");
         return;
     }
 
@@ -557,9 +557,9 @@ void restartProcess (const File& targetFolder)
 
    #if JUCE_MAC || JUCE_LINUX
     #if JUCE_MAC
-     auto newProcess = targetFolder.getChildFile ("SonoBus.app").getChildFile ("Contents").getChildFile ("MacOS").getChildFile ("SonoBus");
+     auto newProcess = targetFolder.getChildFile ("CoLabs.app").getChildFile ("Contents").getChildFile ("MacOS").getChildFile ("CoLabs");
     #elif JUCE_LINUX
-     auto newProcess = targetFolder.getChildFile ("SonoBus");
+     auto newProcess = targetFolder.getChildFile ("CoLabs");
     #endif
 
     StringArray command ("/bin/sh", "-c", "while killall -0 SonoBus; do sleep 5; done; " + newProcess.getFullPathName().quoted());

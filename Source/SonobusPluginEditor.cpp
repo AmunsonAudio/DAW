@@ -340,7 +340,7 @@ SonobusAudioProcessorEditor::SonobusAudioProcessorEditor (SonobusAudioProcessor&
     mTitleLabel->addMouseListener(this, false);
 
     mTitleImage = std::make_unique<ImageComponent>("title");
-    mTitleImage->setImage(ImageCache::getFromMemory(BinaryData::sonobus_logo_96_png, BinaryData::sonobus_logo_96_pngSize));
+    mTitleImage->setImage(ImageCache::getFromMemory(BinaryData::AmunsonAudioWide_png, BinaryData::AmunsonAudioWide_pngSize));
     mTitleImage->setInterceptsMouseClicks(true, false);
     mTitleImage->addMouseListener(this, false);
 
@@ -690,10 +690,10 @@ SonobusAudioProcessorEditor::SonobusAudioProcessorEditor (SonobusAudioProcessor&
 
 
     mConnectButton = std::make_unique<SonoTextButton>("directconnect");
-    mConnectButton->setButtonText(TRANS("Connect..."));
+    mConnectButton->setButtonText("Start Jam Session");
     mConnectButton->addListener(this);
-    mConnectButton->setColour(TextButton::buttonColourId, Colour::fromFloatRGBA(0.1, 0.4, 0.6, 0.6));
-    mConnectButton->setColour(TextButton::buttonOnColourId, Colour::fromFloatRGBA(0.6, 0.4, 0.6, 0.6));
+    mConnectButton->setColour(TextButton::buttonColourId, Colour (0xFF1A2E61));
+    mConnectButton->setColour(TextButton::buttonOnColourId, Colour (0xFF1A2E61));
     mConnectButton->setColour(SonoTextButton::outlineColourId, Colour::fromFloatRGBA(0.5, 0.5, 0.5, 0.4));
     mConnectButton->setTextJustification(Justification::centred);
 
@@ -1115,8 +1115,8 @@ SonobusAudioProcessorEditor::SonobusAudioProcessorEditor (SonobusAudioProcessor&
 
     
     mTopLevelContainer->addAndMakeVisible(mMainViewport.get());
-    mTopLevelContainer->addAndMakeVisible(mTitleLabel.get());
-    //addAndMakeVisible(mTitleImage.get());
+    // mTopLevelContainer->addAndMakeVisible(mTitleLabel.get());
+    mTopLevelContainer->addAndMakeVisible(mTitleImage.get());
 
     mTopLevelContainer->addAndMakeVisible(mMainLinkButton.get());
     mTopLevelContainer->addAndMakeVisible(mMainGroupLabel.get());
@@ -2160,7 +2160,7 @@ void SonobusAudioProcessorEditor::buttonClicked (Button* buttonThatWasClicked)
 #endif
             
             // create new timestamped filename
-            String filename = (currGroup.isEmpty() ? "SonoBusSession" : currGroup) + String("_") + Time::getCurrentTime().formatted("%Y-%m-%d_%H.%M.%S");
+            String filename = (currGroup.isEmpty() ? "AmunsonAudioSession" : currGroup) + String("_") + Time::getCurrentTime().formatted("%Y-%m-%d_%H.%M.%S");
 
             filename = File::createLegalFileName(filename);
 
@@ -3387,7 +3387,7 @@ void SonobusAudioProcessorEditor::showSettings(bool flag)
         updateOptionsState();
         
        
-        Rectangle<int> bounds =  dw->getLocalArea(nullptr, mTitleLabel->getScreenBounds().reduced(10));
+        Rectangle<int> bounds =  dw->getLocalArea(nullptr, mTitleImage->getScreenBounds().reduced(10));
         DBG("callout bounds: " << bounds.toString());
         settingsCalloutBox = & CallOutBox::launchAsynchronously (std::move(wrap), bounds , dw, false);
         if (CallOutBox * box = dynamic_cast<CallOutBox*>(settingsCalloutBox.get())) {
@@ -3486,7 +3486,7 @@ void SonobusAudioProcessorEditor::updateState(bool rebuildInputChannels)
         mConnectButton->setToggleState(true, dontSendNotification);
     }
     else {
-        mConnectButton->setButtonText(TRANS("Connect..."));
+        mConnectButton->setButtonText("Start Jam Session");
         mConnectButton->setToggleState(false, dontSendNotification);
         
         mPeerContainer->resetPendingUsers();
@@ -4558,7 +4558,7 @@ void SonobusAudioProcessorEditor::updateLayout()
     titleBox.flexDirection = FlexBox::Direction::row;
     titleBox.items.add(FlexItem(2, 20).withMargin(1).withFlex(0));
     titleBox.items.add(FlexItem(minitemheight - 8, minitemheight - 12, *mSettingsButton).withMargin(1).withMaxWidth(44).withFlex(0));
-    titleBox.items.add(FlexItem(86, 20, *mTitleLabel).withMargin(1).withFlex(0));
+    titleBox.items.add(FlexItem(106, 20, *mTitleImage).withMargin(1).withFlex(0));
     if (iaaConnected) {
         titleBox.items.add(FlexItem(4, 4).withMargin(1).withFlex(0.0));
         titleBox.items.add(FlexItem(minitemheight, minitemheight, *mIAAHostButton).withMargin(0).withFlex(0));

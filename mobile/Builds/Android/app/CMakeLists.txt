@@ -1,7 +1,7 @@
 # Automatically generated CMakeLists, created by the Projucer
 # Don't edit this file! Your changes will be overwritten when you re-save the Projucer project!
 
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.22)
 
 project(juce_jni_project)
 
@@ -14,7 +14,7 @@ add_subdirectory (${OBOE_DIR} ./oboe)
 add_library("cpufeatures" STATIC "${ANDROID_NDK}/sources/android/cpufeatures/cpu-features.c")
 set_source_files_properties("${ANDROID_NDK}/sources/android/cpufeatures/cpu-features.c" PROPERTIES COMPILE_FLAGS "-Wno-sign-conversion -Wno-gnu-statement-expression")
 
-add_definitions([[-DJUCE_ANDROID=1]] [[-DJUCE_ANDROID_API_VERSION=24]] [[-DJUCE_PUSH_NOTIFICATIONS=1]] [[-DJUCE_PUSH_NOTIFICATIONS_ACTIVITY="com/sonosaurus/sonobus/SonoBusActivity"]] [[-DJUCE_CONTENT_SHARING=1]] [[-DJUCE_ANDROID_GL_ES_VERSION_3_0=1]] [[-DJUCE_USE_CUSTOM_PLUGIN_STANDALONE_APP=1]] [[-DSONOBUS_BUILD_VERSION="1.4.9-74"]] [[-DUSE_CODEC_OPUS=1]] [[-DAOO_TIMEFILTER_CHECK=0]] [[-DAOO_STATIC]] [[-DJUCE_STANDALONE_FILTER_WINDOW_USE_KIOSK_MODE=0]] [[-DJUCE_ANDROID_ACTIVITY_OVERRIDE_CLASSNAME="com_sonosaurus_sonobus_SonoBusActivity"]] [[-DJUCE_ANDROID_ACTIVITY_OVERRIDE_CLASSPATH="com/sonosaurus/sonobus/SonoBusActivity"]] [[-DJUCER_ANDROIDSTUDIO_7F0E4A25=1]] [[-DJUCE_APP_VERSION=1.6.2]] [[-DJUCE_APP_VERSION_HEX=0x10602]])
+add_definitions([[-DJUCE_ANDROID=1]] [[-DJUCE_ANDROID_API_VERSION=24]] [[-DJUCE_PUSH_NOTIFICATIONS=1]] [[-DJUCE_PUSH_NOTIFICATIONS_ACTIVITY="com/amunsonaudio/CoLabs/SonoBusActivity"]] [[-DJUCE_CONTENT_SHARING=1]] [[-DJUCE_ANDROID_GL_ES_VERSION_3_0=1]] [[-DJUCE_USE_CUSTOM_PLUGIN_STANDALONE_APP=1]] [[-DSONOBUS_BUILD_VERSION="1.4.9-74"]] [[-DUSE_CODEC_OPUS=1]] [[-DAOO_TIMEFILTER_CHECK=0]] [[-DAOO_STATIC]] [[-DJUCE_STANDALONE_FILTER_WINDOW_USE_KIOSK_MODE=0]] [[-DJUCE_ANDROID_ACTIVITY_OVERRIDE_CLASSNAME="com_sonosaurus_sonobus_SonoBusActivity"]] [[-DJUCE_ANDROID_ACTIVITY_OVERRIDE_CLASSPATH="com/sonosaurus/sonobus/SonoBusActivity"]] [[-DJUCER_ANDROIDSTUDIO_7F0E4A25=1]] [[-DJUCE_APP_VERSION=1.6.2]] [[-DJUCE_APP_VERSION_HEX=0x10602]])
 
 include_directories( AFTER
     "../../../JuceLibraryCode"
@@ -120,6 +120,7 @@ add_library( ${BINARY_NAME}
     "../../../../localization/localized_pt-br.txt"
     "../../../../localization/localized_pt-pt.txt"
     "../../../../localization/localized_ru.txt"
+    "../../../../images/AmunsonAudioWide.png"
     "../../../../images/bar_click.wav"
     "../../../../images/beat_click.wav"
     "../../../../images/chat.svg"
@@ -303,6 +304,7 @@ add_library( ${BINARY_NAME}
     "../../../../Source/VersionInfo.h"
     "../../../../Source/WaveformTransportComponent.h"
     "../../../../Source/zitaRev.h"
+    "../../../../Source/BricolageGrotesque-Regular.ttf"
     "../../../../deps/ff_meters/LevelMeter/LevelMeter.cpp"
     "../../../../deps/ff_meters/LevelMeter/LevelMeter.h"
     "../../../../deps/ff_meters/LevelMeter/LevelMeterSource.h"
@@ -2246,6 +2248,7 @@ set_source_files_properties(
     "../../../../localization/localized_pt-br.txt"
     "../../../../localization/localized_pt-pt.txt"
     "../../../../localization/localized_ru.txt"
+    "../../../../images/AmunsonAudioWide.png"
     "../../../../images/bar_click.wav"
     "../../../../images/beat_click.wav"
     "../../../../images/chat.svg"
@@ -2392,6 +2395,7 @@ set_source_files_properties(
     "../../../../Source/VersionInfo.h"
     "../../../../Source/WaveformTransportComponent.h"
     "../../../../Source/zitaRev.h"
+    "../../../../Source/BricolageGrotesque-Regular.ttf"
     "../../../../deps/ff_meters/LevelMeter/LevelMeter.cpp"
     "../../../../deps/ff_meters/LevelMeter/LevelMeter.h"
     "../../../../deps/ff_meters/LevelMeter/LevelMeterSource.h"
@@ -4294,7 +4298,7 @@ target_link_libraries( ${BINARY_NAME}
     ${android}
     ${glesv3}
     ${egl}
-    ${opus}
     "cpufeatures"
     "oboe"
+    [[opus]]
 )

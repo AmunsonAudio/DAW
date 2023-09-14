@@ -8,9 +8,16 @@ function die {
     exit 1
 }
 
+echo "!!! BEGINNING NOTARIZE: $* !!!"
+
 # this is a specific password for the notarization service -- I'm storing  it the Keychain under the name
 # 'Notarization-PASSWORD' -- the password is something like azcy-sdjd-defe-nufj
 #account_pwd=$(security find-generic-password -a ${USER} -s Notarization-PASSWORD -w)
+
+# to store the password, run a command like this:
+# xcrun altool --store-password-in-keychain-item "Notarization-PASSWORD" -u "login@appleid.email" -p "YOUR-PASS-WORD-HERE"
+# see more: https://stackoverflow.com/a/69276010/1588159
+
 account_pwd="@keychain:Notarization-PASSWORD"
 account_name="${APPLEID}" # obvsiouly you need to replace this with your developer account..
 
@@ -144,12 +151,17 @@ if (( $do_submit )); then
     echo "Submitting ${tmpzip_basename}, please be patient it must be uploaded, and JAVA is slow.."
     # some versions of altool write the uuid to stderr, others write to stdout, so we redirect *both* in the file...
 
+    echo  "command to run: xcrun altool --notarize-app --primary-bundle-id "$bundle_id" $account_options  -f "$tmpzip" >& "$tmpfile""
     xcrun altool --notarize-app --primary-bundle-id "$bundle_id" $account_options  -f "$tmpzip" >& "$tmpfile"
     altool_status=$?
 
+    echo "ran altool"
+
     if [[ "$altool_status" == "0" ]]; then
+        echo status was 0
         uuid=$(grep "RequestUUID = " "$tmpfile" | sed -e 's/.* = //')
     else
+        echo status was not 0
         if [[ -f "$tmpfile" ]]; then
             # second chance, if the file has already been uploaded, try to find the uuid in the error log
             # "The software asset has already been uploaded. The update ID is xxxxxxx-xxxx-xxxx-xxxxxxxx"
@@ -177,6 +189,8 @@ else
     echo "Checking uuid $uuid"
 fi
 
+echo "!!! do_getresult: $do_getresult"
+
 if (( $do_getresult )); then
     numtry=0
     ok=0
@@ -189,6 +203,8 @@ if (( $do_getresult )); then
             if (( $numtry > 50 )); then
                 die "two many attempts, notarization seem to take foreever..."
             fi
+            echo "!!! checking!!"
+            echo "command to run: xcrun altool --notarization-info "$uuid" $account_options >> "$tmpfile""
             xcrun altool --notarization-info "$uuid" $account_options >> "$tmpfile" 2>&1 || continue;
             status=$(tail -3 "$tmpfile" | grep "Status Message" | sed -e 's/Status Message.*: *//')
             sec=$(($(date +%s) - $(stat -t %s -f %m -- "$uuidfile"))); # number of seconds since the creation of the file
@@ -214,3 +230,5 @@ if (( $ok )); then
 else
     exit 42
 fi
+
+echo "!!! ENDING notarize: $* !!!"

@@ -51,8 +51,8 @@
 #if ! JUCE_DONT_DECLARE_PROJECTINFO
 namespace ProjectInfo
 {
-    const char* const  projectName    = "SonoBus";
-    const char* const  companyName    = "Sonosaurus";
+    const char* const  projectName    = "CoLabs";
+    const char* const  companyName    = "Amunson Audio";
     const char* const  versionString  = "1.6.2";
     const int          versionNumber  = 0x10602;
 }

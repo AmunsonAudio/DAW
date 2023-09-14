@@ -31,7 +31,7 @@ if [ -d "$1" ] ; then
   FILES=`echo *.exe *.dmg`
   
   echo "Making release $1 with assets: ${FILES}"
-  gitrelease.sh sonosaurus/sonobus $1 -- *.exe *.dmg < notes.md
+  gitrelease.sh amunsonaudio/DAW $1 -- *.exe *.dmg < notes.md
 
   echo
   echo "Done!"

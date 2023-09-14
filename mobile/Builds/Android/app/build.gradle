@@ -2,10 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 31
-    namespace "com.sonosaurus.sonobus"
+    ndkVersion "25.2.9519653"
+    namespace "com.amunsonaudio.colabs"
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
+            version "3.22.1"
         }
     }
     signingConfigs {
@@ -19,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.sonosaurus.sonobus"
+        applicationId "com.amunsonaudio.colabs"
         minSdkVersion    24
         targetSdkVersion 31
         externalNativeBuild {

@@ -30,7 +30,7 @@
 					<key>identifier</key>
 					<string>LayoutItem.1C6673E6-B165-43BC-B5BD-D533B438609A</string>
 					<key>name</key>
-					<string>Sonobus.aaxplugin</string>
+					<string>CoLabs.aaxplugin</string>
 					<key>position</key>
 					<string>{672, 208}</string>
 					<key>type</key>
@@ -40,7 +40,7 @@
 					<key>identifier</key>
 					<string>LayoutItem.FD8ED432-C7D4-4775-96BA-4BC525133960</string>
 					<key>name</key>
-					<string>SonoBus.vst</string>
+					<string>CoLabs.vst</string>
 					<key>position</key>
 					<string>{544, 208}</string>
 					<key>type</key>
@@ -50,7 +50,7 @@
 					<key>identifier</key>
 					<string>LayoutItem.0F3579EF-C06B-4563-90DB-5A7DF7BAC32B</string>
 					<key>name</key>
-					<string>SonoBus.vst3</string>
+					<string>CoLabs.vst3</string>
 					<key>position</key>
 					<string>{416, 208}</string>
 					<key>type</key>
@@ -88,7 +88,7 @@
 					<key>identifier</key>
 					<string>LayoutItem.E7A4BEB2-AC0A-4490-92C8-1E47B256C0F6</string>
 					<key>name</key>
-					<string>SonoBus.app</string>
+					<string>CoLabs.app</string>
 					<key>position</key>
 					<string>{112, 208}</string>
 					<key>type</key>
@@ -108,7 +108,7 @@
 					<key>identifier</key>
 					<string>LayoutItem.25D3A305-E6AE-4000-9CE4-D616D0DF22A7</string>
 					<key>name</key>
-					<string>SonoBus.component</string>
+					<string>CoLabs.component</string>
 					<key>position</key>
 					<string>{288, 208}</string>
 					<key>type</key>

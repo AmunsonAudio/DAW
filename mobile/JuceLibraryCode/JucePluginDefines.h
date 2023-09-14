@@ -41,19 +41,19 @@
  #define JucePlugin_Enable_ARA             0
 #endif
 #ifndef  JucePlugin_Name
- #define JucePlugin_Name                   "SonoBus"
+ #define JucePlugin_Name                   "CoLabs"
 #endif
 #ifndef  JucePlugin_Desc
- #define JucePlugin_Desc                   "SonoBus - Network Audio"
+ #define JucePlugin_Desc                   "CoLabs - Network Jam Tool"
 #endif
 #ifndef  JucePlugin_Manufacturer
- #define JucePlugin_Manufacturer           "Sonosaurus"
+ #define JucePlugin_Manufacturer           "Amunson Audio"
 #endif
 #ifndef  JucePlugin_ManufacturerWebsite
- #define JucePlugin_ManufacturerWebsite    "www.Sonosaurus.com"
+ #define JucePlugin_ManufacturerWebsite    "www.AmunsonAudio.com"
 #endif
 #ifndef  JucePlugin_ManufacturerEmail
- #define JucePlugin_ManufacturerEmail      "support@sonosaurus.com"
+ #define JucePlugin_ManufacturerEmail      "colabs@amunsonaudio.com"
 #endif
 #ifndef  JucePlugin_ManufacturerCode
  #define JucePlugin_ManufacturerCode       0x536f6e6f
@@ -101,19 +101,19 @@
  #define JucePlugin_AUSubType              JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_AUExportPrefix
- #define JucePlugin_AUExportPrefix         SonoBusAU
+ #define JucePlugin_AUExportPrefix         CoLabsAU
 #endif
 #ifndef  JucePlugin_AUExportPrefixQuoted
- #define JucePlugin_AUExportPrefixQuoted   "SonoBusAU"
+ #define JucePlugin_AUExportPrefixQuoted   "CoLabsAU"
 #endif
 #ifndef  JucePlugin_AUManufacturerCode
  #define JucePlugin_AUManufacturerCode     JucePlugin_ManufacturerCode
 #endif
 #ifndef  JucePlugin_CFBundleIdentifier
- #define JucePlugin_CFBundleIdentifier     com.Sonosaurus.SonoBus
+ #define JucePlugin_CFBundleIdentifier     com.AmunsonAudio.CoLabs
 #endif
 #ifndef  JucePlugin_AAXIdentifier
- #define JucePlugin_AAXIdentifier          com.Sonosaurus.SonoBus
+ #define JucePlugin_AAXIdentifier          com.AmunsonAudio.CoLabs
 #endif
 #ifndef  JucePlugin_AAXManufacturerCode
  #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
@@ -137,7 +137,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "Sonosaurus: SonoBus"
+ #define JucePlugin_IAAName                "Amunson Audio: CoLabs"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16
@@ -152,10 +152,10 @@
  #define JucePlugin_ARATransformationFlags  0
 #endif
 #ifndef  JucePlugin_ARAFactoryID
- #define JucePlugin_ARAFactoryID           "com.Sonosaurus.SonoBus.factory"
+ #define JucePlugin_ARAFactoryID           "com.AmunsonAudio.CoLabs.factory"
 #endif
 #ifndef  JucePlugin_ARADocumentArchiveID
- #define JucePlugin_ARADocumentArchiveID   "com.Sonosaurus.SonoBus.aradocumentarchive.1.6.1"
+ #define JucePlugin_ARADocumentArchiveID   "com.AmunsonAudio.CoLabs.aradocumentarchive.1.6.2"
 #endif
 #ifndef  JucePlugin_ARACompatibleArchiveIDs
  #define JucePlugin_ARACompatibleArchiveIDs  ""
