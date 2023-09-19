@@ -64,9 +64,9 @@ void LatestVersionCheckerAndUpdater::run()
         if (showAlertWindows)
             AlertWindow::showMessageBoxAsync (AlertWindow::WarningIcon,
                                               "Update Server Communication Error",
-                                              "Failed to communicate with the SonoBus update server.\n"
+                                              "Failed to communicate with the update server.\n"
                                               "Please try again in a few minutes.\n\n"
-                                              "If this problem persists you can download the latest version of SonoBus from sonobus.net");
+                                              "If this problem persists you can download the latest version of CoLabs from amunsonaudio.com/colabs");
 
         return;
     }
@@ -124,12 +124,12 @@ class UpdateDialog  : public Component
 public:
     UpdateDialog (const String& newVersion, const String& releaseNotes)
     {
-        titleLabel.setText ("SonoBus version " + newVersion, dontSendNotification);
+        titleLabel.setText ("CoLabs version " + newVersion, dontSendNotification);
         titleLabel.setFont ({ 15.0f, Font::bold });
         titleLabel.setJustificationType (Justification::centred);
         addAndMakeVisible (titleLabel);
 
-        contentLabel.setText ("A new version of SonoBus is available - would you like to download it?", dontSendNotification);
+        contentLabel.setText ("A new version of CoLabs is available - would you like to download it?", dontSendNotification);
         contentLabel.setFont (15.0f);
         contentLabel.setJustificationType (Justification::topLeft);
         addAndMakeVisible (contentLabel);
@@ -204,7 +204,7 @@ public:
     {
         DialogWindow::LaunchOptions options;
 
-        options.dialogTitle = "Download SonoBus version " + newVersionString + "?";
+        options.dialogTitle = "Download CoLabs version " + newVersionString + "?";
         options.resizable = false;
 
         auto* content = new UpdateDialog (newVersionString, releaseNotes);

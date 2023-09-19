@@ -1805,7 +1805,7 @@ void PeersContainerView::updatePeerViews(int specific)
             }
             else {
 
-                ppvf->messageLabel->setText(TRANS("Could not connect with user, one or both of you may need to configure your internal firewall or network router to allow SonoBus to work between you. See the help documentation to enable port forwarding on your router."), dontSendNotification);
+                ppvf->messageLabel->setText(TRANS("Could not connect with user, one or both of you may need to configure your internal firewall or network router to allow CoLabs to work between you. See the help documentation to enable port forwarding on your router."), dontSendNotification);
                 ppvf->removeButton->setVisible(true);
             }
         }

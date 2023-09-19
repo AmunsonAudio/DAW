@@ -45,7 +45,7 @@ enum {
     PeerLayoutRadioGroupId = 1
 };
 
-#define SONOBUS_SCHEME "sonobus"
+#define SONOBUS_SCHEME "colabs"
 
 using namespace SonoAudio;
 
@@ -332,7 +332,7 @@ SonobusAudioProcessorEditor::SonobusAudioProcessorEditor (SonobusAudioProcessor&
         currConnectionInfo.userName = lastusername;
     }
 
-    mTitleLabel = std::make_unique<Label>("title", TRANS("SonoBus"));
+    mTitleLabel = std::make_unique<Label>("title", TRANS("CoLabs"));
     mTitleLabel->setFont(20);
     mTitleLabel->setAccessible(false);
     mTitleLabel->setColour(Label::textColourId, Colour(0xff47b0f8));

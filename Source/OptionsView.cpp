@@ -356,8 +356,8 @@ OptionsView::OptionsView(SonobusAudioProcessor& proc, std::function<AudioDeviceM
     mOptionsComponent->addAndMakeVisible(mOptionsDefaultLevelSliderLabel.get());
     mOptionsComponent->addAndMakeVisible(mOptionsChangeAllFormatButton.get());
     mOptionsComponent->addAndMakeVisible(mVersionLabel.get());
-    mOptionsComponent->addAndMakeVisible(mOptionsLanguageChoice.get());
-    mOptionsComponent->addAndMakeVisible(mOptionsLanguageLabel.get());
+    // mOptionsComponent->addAndMakeVisible(mOptionsLanguageChoice.get());
+    // mOptionsComponent->addAndMakeVisible(mOptionsLanguageLabel.get());
     mOptionsComponent->addAndMakeVisible(mOptionsAutoDropThreshSlider.get());
     mOptionsComponent->addAndMakeVisible(mOptionsAutoDropThreshLabel.get());
 
@@ -370,7 +370,7 @@ OptionsView::OptionsView(SonobusAudioProcessor& proc, std::function<AudioDeviceM
 
     if (JUCEApplicationBase::isStandaloneApp()) {
         mOptionsComponent->addAndMakeVisible(mOptionsOverrideSamplerateButton.get());
-        mOptionsComponent->addAndMakeVisible(mOptionsShouldCheckForUpdateButton.get());
+        // mOptionsComponent->addAndMakeVisible(mOptionsShouldCheckForUpdateButton.get());
         if (mOptionsAllowBluetoothInput) {
             mOptionsComponent->addAndMakeVisible(mOptionsAllowBluetoothInput.get());
         }

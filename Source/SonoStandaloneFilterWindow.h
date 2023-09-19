@@ -98,7 +98,7 @@ public:
           autoOpenMidiDevices (shouldAutoOpenMidiDevices),
           shouldOverrideSampleRate (var(true)),
           allowBluetoothInput (var(false)),
-          shouldCheckForNewVersion (var(true))
+          shouldCheckForNewVersion (var(false))
     {
         createPlugin();
 
