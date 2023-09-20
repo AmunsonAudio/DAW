@@ -1,90 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
-	<key>UIStatusBarHidden</key>
-	<false/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLName</key>
-			<string>com.amunsonaudio</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>amunsonaudio</string>
-			</array>
-		</dict>
-	</array>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>CoLabs uses networking to communicate with other local services</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This app requires audio input. If you do not have an audio interface connected it will use the built-in microphone.</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.amunsonaudio.CoLabs.CoLabsAUv3</string>
-	<key>CFBundleName</key>
-	<string>CoLabs</string>
-	<key>CFBundleDisplayName</key>
-	<string>CoLabs</string>
-	<key>CFBundlePackageType</key>
-	<string>XPC!</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.6.2</string>
-	<key>CFBundleVersion</key>
-	<string>81</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>2023 Amunson Audio LLC</string>
-	<key>NSHighResolutionCapable</key>
-	<true/>
-	<key>UISupportsDocumentBrowser</key>
-	<true/>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionPrincipalClass</key>
-		<string>CoLabsAUFactoryAUv3</string>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.AudioUnit-UI</string>
-		<key>NSExtensionAttributes</key>
-		<dict>
-			<key>AudioComponents</key>
-			<array>
-				<dict>
-					<key>name</key>
-					<string>Amunson Audio: CoLabs</string>
-					<key>description</key>
-					<string>CoLabs - Network Jam Tool</string>
-					<key>factoryFunction</key>
-					<string>CoLabsAUFactoryAUv3</string>
-					<key>manufacturer</key>
-					<string>Sono</string>
-					<key>type</key>
-					<string>aufx</string>
-					<key>subtype</key>
-					<string>NBus</string>
-					<key>version</key>
-					<integer>67074</integer>
-					<key>sandboxSafe</key>
-					<true/>
-					<key>tags</key>
-					<array>
-						<string>Effects</string>
-					</array>
-				</dict>
-			</array>
-		</dict>
-	</dict>
-</dict>
+  <dict>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <key>UIStatusBarHidden</key>
+    <false/>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleLightContent</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLName</key>
+        <string>com.amunsonaudio</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>amunsonaudio</string>
+        </array>
+      </dict>
+    </array>
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>CoLabs uses networking to communicate with other local services</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app requires audio input. If you do not have an audio interface connected it will use the built-in microphone.</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>CFBundleExecutable</key>
+    <string>${EXECUTABLE_NAME}</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.amunsonaudio.CoLabs.CoLabsAUv3</string>
+    <key>CFBundleName</key>
+    <string>CoLabs</string>
+    <key>CFBundleDisplayName</key>
+    <string>CoLabs</string>
+    <key>CFBundlePackageType</key>
+    <string>XPC!</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.6.4</string>
+    <key>CFBundleVersion</key>
+    <string>82</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>2023 Amunson Audio LLC</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>UISupportsDocumentBrowser</key>
+    <true/>
+    <key>NSExtension</key>
+    <dict>
+      <key>NSExtensionPrincipalClass</key>
+      <string>CoLabsAUFactoryAUv3</string>
+      <key>NSExtensionPointIdentifier</key>
+      <string>com.apple.AudioUnit-UI</string>
+      <key>NSExtensionAttributes</key>
+      <dict>
+        <key>AudioComponents</key>
+        <array>
+          <dict>
+            <key>name</key>
+            <string>Amunson Audio: CoLabs</string>
+            <key>description</key>
+            <string>CoLabs - Network Jam Tool</string>
+            <key>factoryFunction</key>
+            <string>CoLabsAUFactoryAUv3</string>
+            <key>manufacturer</key>
+            <string>Sono</string>
+            <key>type</key>
+            <string>aufx</string>
+            <key>subtype</key>
+            <string>NBus</string>
+            <key>version</key>
+            <integer>67076</integer>
+            <key>sandboxSafe</key>
+            <true/>
+            <key>tags</key>
+            <array>
+              <string>Effects</string>
+            </array>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </dict>
 </plist>

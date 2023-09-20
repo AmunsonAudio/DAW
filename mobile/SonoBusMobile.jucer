@@ -4,7 +4,7 @@
               companyCopyright="2023 Amunson Audio LLC" companyEmail="colabs@amunsonaudio.com"
               pluginFormats="buildAUv3,buildStandalone,enableIAA" pluginManufacturerCode="Sono"
               pluginCode="NBus" defines="JUCE_USE_CUSTOM_PLUGIN_STANDALONE_APP=1&#10;SONOBUS_BUILD_VERSION=&quot;1.4.9-74&quot;&#10;"
-              pluginDesc="CoLabs - Network Jam Tool" version="1.6.2" cppLanguageStandard="17"
+              pluginDesc="CoLabs - Network Jam Tool" version="1.6.4" cppLanguageStandard="17"
               projectLineFeed="&#10;" jucerFormatVersion="1" pluginAUMainType="'aufx'"
               pluginAUIsSandboxSafe="1">
   <MAINGROUP id="i87g34" name="CoLabs">
@@ -401,7 +401,7 @@
                   UISupportsDocumentBrowser="1" UIFileSharingEnabled="1" customLaunchStoryboard="../images/LaunchScreen.storyboard"
                   iosScreenOrientation="UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight,UIInterfaceOrientationPortrait,UIInterfaceOrientationPortraitUpsideDown"
                   iPadScreenOrientation="UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight,UIInterfaceOrientationPortrait,UIInterfaceOrientationPortraitUpsideDown"
-                  UIRequiresFullScreen="0" buildNumber="80" bundleIdentifier="com.amunsonaudio.CoLabs">
+                  UIRequiresFullScreen="0" buildNumber="82" bundleIdentifier="com.amunsonaudio.CoLabs">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" headerPath="../../../deps/aoo/lib&#10;../../../deps/aoo/deps&#10;../../../deps/ios/include&#10;"
                        libraryPath="../../../deps/ios/lib" defines="LOGLEVEL=2&#10;JUCE_IOS_AUDIO_LOGGING=1"
