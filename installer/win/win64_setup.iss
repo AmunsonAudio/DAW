@@ -12,8 +12,8 @@ ArchitecturesAllowed=x64
 ArchitecturesInstallIn64BitMode=x64
 
 [Files]
-Source: "..\..\build\SonoBus_artefacts\Release\Standalone\CoLabs.exe"; DestDir: "{app}";
-Source: "..\..\build\SonoBus_artefacts\Release\VST3\CoLabs.vst3\Contents\x86_64-win\CoLabs.vst3"; DestDir: "{app}"; Check: InstallVSTFile;
+Source: "..\..\build\CoLabs_artefacts\Release\Standalone\CoLabs.exe"; DestDir: "{app}";
+Source: "..\..\build\CoLabs_artefacts\Release\VST3\CoLabs.vst3\Contents\x86_64-win\CoLabs.vst3"; DestDir: "{app}"; Check: InstallVSTFile;
 
 [Icons]
 Name: "{group}\CoLabs"; Filename: "{app}\CoLabs.exe"
