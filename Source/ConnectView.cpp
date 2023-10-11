@@ -862,7 +862,7 @@ void ConnectView::publicGroupLogin()
 
 bool ConnectView::copyInfoToClipboard(bool singleURL, String * retmessage)
 {
-    String message = TRANS("Share this link with others to connect with SonoBus:") + " \n";
+    String message = TRANS("Share this link with others to connect with CoLabs:") + " \n";
 
     String hostport = mServerHostEditor->getText();
     if (hostport.isEmpty()) {
@@ -871,31 +871,35 @@ bool ConnectView::copyInfoToClipboard(bool singleURL, String * retmessage)
 
     String groupName;
     String groupPassword;
+    String userName;
 
     if (!currConnected) {
         if (mConnectTab->getCurrentContentComponent() == mServerConnectViewport.get()) {
             groupName = mServerGroupEditor->getText().trim();
             groupPassword = mServerGroupPasswordEditor->getText();
+            userName = mServerUsernameEditor->getText();
         }
     } else {
         groupName = currConnectionInfo.groupName;
         groupPassword = currConnectionInfo.groupPassword;
+        userName = currConnectionInfo.userName;
     }
 
     String urlstr1;
-    urlstr1 << String("sonobus://") << hostport << String("/");
+    urlstr1 << String("colabs://") << hostport << String("/");
     URL url(urlstr1);
-    URL url2("http://go.sonobus.net/sblaunch");
+    URL url2("https://amunson-audio.github.io/CoLabs-share-link/");
 
     if (url.isWellFormed() && groupName.isNotEmpty()) {
 
-        url2 = url2.withParameter("s", hostport);
+        url2 = url2.withParameter("host", hostport);
 
         url = url.withParameter("g", groupName);
-        url2 = url2.withParameter("g", groupName);
+        url2 = url2.withParameter("group", groupName);
+        url2 = url2.withParameter("user", userName);
 
         if (groupPassword.isNotEmpty()) {
-            url = url.withParameter("p", groupPassword);
+            url = url.withParameter("password", groupPassword);
             url2 = url2.withParameter("p", groupPassword);
         }
 
@@ -1332,8 +1336,8 @@ bool ConnectView::attemptToPasteConnectionFromClipboard()
         }
         else {
             // look for go.sonobus.net/sblaunch  url
-            urlpart = clip.fromFirstOccurrenceOf("http://go.sonobus.net/sblaunch?", true, false);
-            if (urlpart.isEmpty()) urlpart = clip.fromFirstOccurrenceOf("https://go.sonobus.net/sblaunch?", true, false);
+            urlpart = clip.fromFirstOccurrenceOf("https://amunson-audio.github.io/CoLabs-share-link/?", true, false);
+            if (urlpart.isEmpty()) urlpart = clip.fromFirstOccurrenceOf("https://amunson-audio.github.io/CoLabs-share-link/?", true, false);
 
             if (urlpart.isNotEmpty()) {
                 urlpart = urlpart.upToFirstOccurrenceOf("\n", false, true).trim();
