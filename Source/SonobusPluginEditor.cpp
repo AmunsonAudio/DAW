@@ -2618,7 +2618,7 @@ bool SonobusAudioProcessorEditor::loadSettingsFromFile(const File & file)
 
     if (propfile.containsKey("filterStateXML")) {
         String filtxml = propfile.getValue ("filterStateXML");
-        data.replaceWith(filtxml.toUTF8(), filtxml.getNumBytesAsUTF8());
+        data.replaceAll(filtxml.toUTF8(), filtxml.getNumBytesAsUTF8());
         if (data.getSize() > 0) {
             processor.setStateInformationWithOptions (data.getData(), (int) data.getSize(), false, true, true);
         }
