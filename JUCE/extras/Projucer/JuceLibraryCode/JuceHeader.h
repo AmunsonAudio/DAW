@@ -12,6 +12,7 @@
 
 #pragma once
 
+#include "AppConfig.h"
 
 #include <juce_build_tools/juce_build_tools.h>
 #include <juce_core/juce_core.h>
@@ -42,9 +43,9 @@
 #if ! JUCE_DONT_DECLARE_PROJECTINFO
 namespace ProjectInfo
 {
-    const char* const  projectName    = "Projucer";
-    const char* const  companyName    = "Raw Material Software Limited";
-    const char* const  versionString  = "6.0.8";
-    const int          versionNumber  = 0x60008;
+    const char* const  projectName    = "CoLabs 2.0";
+    const char* const  companyName    = "The CoLabs, Inc.";
+    const char* const  versionString  = "1.0.1";
+    const int          versionNumber  = 0x10001;
 }
 #endif

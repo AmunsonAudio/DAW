@@ -12,21 +12,21 @@
     <key>CFBundleIconFile</key>
     <string>Icon.icns</string>
     <key>CFBundleIdentifier</key>
-    <string>com.juce.theprojucer</string>
+    <string>com.colabsinc.colabs2</string>
     <key>CFBundleName</key>
-    <string>Projucer</string>
+    <string>CoLabs 2.0</string>
     <key>CFBundleDisplayName</key>
-    <string>Projucer</string>
+    <string>CoLabs 2.0</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>6.0.8</string>
+    <string>1.0.1</string>
     <key>CFBundleVersion</key>
-    <string>6.0.8</string>
+    <string>1.0.1</string>
     <key>NSHumanReadableCopyright</key>
-    <string>Raw Material Software Limited</string>
+    <string>The CoLabs, Inc.</string>
     <key>NSHighResolutionCapable</key>
     <true/>
     <key>LSApplicationCategoryType</key>
@@ -46,6 +46,8 @@
         <string>Icon</string>
         <key>NSPersistentStoreTypeKey</key>
         <string>XML</string>
+        <key>LSHandlerRank</key>
+        <string>Default</string>
       </dict>
     </array>
   </dict>

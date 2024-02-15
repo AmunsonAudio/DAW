@@ -5,4 +5,5 @@
 
 */
 
+#include "AppConfig.h"
 #include <juce_build_tools/juce_build_tools.cpp>
