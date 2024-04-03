@@ -36,9 +36,9 @@ endif()
 # `project()` command. `project()` sets up some helpful variables that describe source/binary
 # directories, and the current project version. This is a standard CMake command.
 
-project(SonoBus VERSION 1.6.2)
+project(CoLAbs VERSION 2.0.1)
 
-set(BUILDVERSION 77)
+set(BUILDVERSION 01)
 
 
 # If you've installed JUCE somehow (via a package manager, or directly using the CMake install
@@ -118,10 +118,10 @@ set (MacPList "<plist version=\"1.0\">
 <array>
      <dict>
          <key>CFBundleURLName</key>
-         <string>net.sonobus</string>
+         <string>com.colabs</string>
          <key>CFBundleURLSchemes</key>
          <array>
-              <string>sonobus</string>
+              <string>colabs</string>
          </array>
       </dict>
    </array>
@@ -150,12 +150,12 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         NEEDS_MIDI_INPUT TRUE
         NEEDS_MIDI_OUTPUT TRUE
         EDITOR_WANTS_KEYBOARD_FOCUS TRUE
-        COMPANY_NAME "AmunsonAudio"
+        COMPANY_NAME "The CoLabs, Inc."
         BUNDLE_ID "com.AmunsonAudio.app"
         MICROPHONE_PERMISSION_ENABLED TRUE
         
-        ICON_BIG "images/sonobus_icon_mac_1024.png"
-        ICON_SMALL "images/sonobus_icon_mac_256.png"
+        ICON_BIG "images/colabs_icon_mac_1024.png"
+        ICON_SMALL "images/colabs_icon_mac_256.png"
         NEEDS_WEB_BROWSER FALSE
         VST2_CATEGORY "${vst2cat}"
         VST3_CATEGORIES "${vst3cats}"
@@ -170,10 +170,10 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         
         
         # other settings...
-        PLUGIN_MANUFACTURER_CODE Sono
+        PLUGIN_MANUFACTURER_CODE Colabs
         PLUGIN_CODE ${plugincode}
         FORMATS ${formats}
-        DESCRIPTION "Amunson Audio"
+        DESCRIPTION "CoLabs"
         PRODUCT_NAME "${product_name}")
 
     juce_generate_juce_header("${target_name}")
@@ -444,7 +444,7 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         JUCE_USE_OBOE_STABILIZED_CALLBACK=1
         JUCE_LOAD_CURL_SYMBOLS_LAZILY=1
         FF_AUDIO_ALLOW_ALLOCATIONS_IN_MEASURE_BLOCK=0
-        SONOBUS_BUILD_VERSION="${VERSION}"
+        COLABS_BUILD_VERSION="${VERSION}"
         ${PLAT_COMPILE_DEFS} )
 
     juce_add_binary_data("${target_name}_SBData" SOURCES
@@ -534,8 +534,6 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
         images/settings_icon.svg
         images/skipback_icon.svg
         images/skipforward_icon.svg
-        images/sonobus_logo_96.png
-        images/sonobus_title_small.png
         images/soundboard.svg
         images/speaker.svg
         images/speaker_disabled.svg
@@ -609,11 +607,11 @@ function(sono_add_custom_plugin_target target_name product_name formats is_instr
 endfunction()
 
 # most of the targets
-sono_add_custom_plugin_target(SonoBus Co-Labs "${FormatsToBuild}" FALSE  "NBus")
+sono_add_custom_plugin_target(Co-Labs "${FormatsToBuild}" TRUE  "NBus")
 
 # Mobile targets
-#sono_add_custom_plugin_target(SonoBusMobile "AUv3 Standalone" FALSE "NBus")
+#sono_add_custom_plugin_target(CoLAbsMobile "AUv3 Standalone" TRUE "NBus")
 
 # add VSTi target
-sono_add_custom_plugin_target(SonoBusInst "SonoBusInstrument" "VST3" TRUE  "IBus")
+sono_add_custom_plugin_target(CoLabsInst "SonoBusInstrument" "VST3" TRUE  "IBus")
 
