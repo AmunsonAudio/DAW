@@ -9,18 +9,18 @@
 #include <windows.h>
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION  6,0,8,0
+FILEVERSION  1,0,1,0
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "CompanyName",  "Raw Material Software Limited\0"
-      VALUE "LegalCopyright",  "Raw Material Software Limited\0"
-      VALUE "FileDescription",  "Projucer\0"
-      VALUE "FileVersion",  "6.0.8\0"
-      VALUE "ProductName",  "Projucer\0"
-      VALUE "ProductVersion",  "6.0.8\0"
+      VALUE "CompanyName",  "The CoLabs, Inc.\0"
+      VALUE "LegalCopyright",  "The CoLabs, Inc.\0"
+      VALUE "FileDescription",  "CoLabs 2.0\0"
+      VALUE "FileVersion",  "1.0.1\0"
+      VALUE "ProductName",  "CoLabs 2.0\0"
+      VALUE "ProductVersion",  "1.0.1\0"
     END
   END
 

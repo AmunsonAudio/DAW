@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="M70qfTRRk" name="Projucer" projectType="guiapp" juceFolder="../../juce"
-              version="6.0.8" bundleIdentifier="com.juce.theprojucer" splashScreenColour="Dark"
-              displaySplashScreen="0" reportAppUsage="0" companyName="Raw Material Software Limited"
-              companyCopyright="Raw Material Software Limited" cppLanguageStandard="11"
-              useAppConfig="0" addUsingNamespaceToJuceHeader="1" jucerFormatVersion="1">
+<JUCERPROJECT id="M70qfTRRk" name="CoLabs 2.0" projectType="guiapp" juceFolder="../../juce"
+              version="1.0.1" bundleIdentifier="com.colabsinc.colabs2" splashScreenColour="Dark"
+              reportAppUsage="0" companyName="The CoLabs, Inc." companyCopyright="The CoLabs, Inc."
+              jucerFormatVersion="1" companyWebsite="www.colabsinc.com" companyEmail="support@colabsinc.com"
+              displaySplashScreen="1" cppLanguageStandard="latest">
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX" vstFolder="~/SDKs/vstsdk2.4" rtasFolder="~/SDKs/PT_80_SDK"
                documentExtensions=".jucer" objCExtraSuffix="zkVtji" bigIcon="Zrx1Gl"
@@ -28,25 +28,6 @@
         <MODULEPATH id="juce_build_tools" path="../Build"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2015 targetFolder="Builds/VisualStudio2015" bigIcon="Zrx1Gl" extraCompilerFlags="/bigobj"
-            smallIcon="Zrx1Gl">
-      <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" targetName="Projucer" debugInformationFormat="ProgramDatabase"
-                       useRuntimeLibDLL="1"/>
-        <CONFIGURATION name="Release" isDebug="0" targetName="Projucer" useRuntimeLibDLL="0"
-                       debugInformationFormat="None" linkTimeOptimisation="0"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="../../modules"/>
-        <MODULEPATH id="juce_gui_basics" path="../../modules"/>
-        <MODULEPATH id="juce_graphics" path="../../modules"/>
-        <MODULEPATH id="juce_events" path="../../modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../modules"/>
-        <MODULEPATH id="juce_cryptography" path="../../modules"/>
-        <MODULEPATH id="juce_core" path="../../modules"/>
-        <MODULEPATH id="juce_build_tools" path="../Build"/>
-      </MODULEPATHS>
-    </VS2015>
     <VS2017 targetFolder="Builds/VisualStudio2017" bigIcon="Zrx1Gl" extraCompilerFlags="/w44265 /w45038 /w44062"
             smallIcon="Zrx1Gl">
       <CONFIGURATIONS>
@@ -100,7 +81,7 @@
       </MODULEPATHS>
     </LINUX_MAKE>
   </EXPORTFORMATS>
-  <MAINGROUP name="Projucer" id="NhrJq66R">
+  <MAINGROUP name="CoLabs 2.0" id="NhrJq66R">
     <GROUP id="{9E4C4E0D-7BAB-EB6F-87DA-FB264EC2AE68}" name="Application">
       <GROUP id="{2F6B47CF-F27B-0D18-331F-533DE3F89310}" name="StartPage">
         <FILE id="PewFno" name="jucer_ContentComponents.h" compile="0" resource="0"
@@ -147,7 +128,7 @@
               file="Source/Application/Windows/jucer_UTF8WindowComponent.h"/>
       </GROUP>
       <FILE id="x5UJUE" name="jucer_Application.cpp" compile="0" resource="0"
-            file="Source/Application/jucer_Application.cpp"/>
+            file="Source/Application/jucer_Application.cpp" xcodeResource="0"/>
       <FILE id="PzHvpv" name="jucer_Application.h" compile="0" resource="0"
             file="Source/Application/jucer_Application.h"/>
       <FILE id="YJn4XV" name="jucer_AutoUpdater.cpp" compile="1" resource="0"
