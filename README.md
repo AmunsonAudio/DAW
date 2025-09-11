@@ -1,3 +1,5 @@
+**Moved:** This repository has been superseded by [AmunsonAudio/CoLabs](https://github.com/AmunsonAudio/CoLabs). Issues, pull requests, and releases are handled there. This repo will be archived after the transition window.
+
 CoLabs
 CoLabs is an easy to use application for streaming high-quality, low-latency peer-to-peer audio between devices over the internet or a local network.
 Simply choose a unique session name (with optional password), and instantly connect multiple people together to make music, remote sessions, podcasts, etc. Easily record the audio from everyone, as well as playback any audio content to the whole group.
